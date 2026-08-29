@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>com.limelightvision</groupId>
-  <artifactId>limelightlib-java</artifactId>
+  <artifactId>limelightlib-cpp</artifactId>
   <versioning>
     <latest>2.0.0-beta3</latest>
     <release>2.0.0-beta3</release>
