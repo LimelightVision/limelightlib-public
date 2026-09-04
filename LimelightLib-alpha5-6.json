@@ -1,5 +1,5 @@
 {
-    "fileName": "LimelightLib.json",
+    "fileName": "LimelightLib-alpha5-6.json",
     "name": "LimelightLib 2",
     "version": "2.0.0-beta5-alpha6",
     "uuid": "708579ad-c4be-4335-af21-7c7d8496c499",
@@ -7,7 +7,7 @@
     "mavenUrls": [
         "https://limelightvision.github.io/limelightlib-public/maven/"
     ],
-    "jsonUrl": "https://limelightvision.github.io/limelightlib-public/LimelightLib.json",
+    "jsonUrl": "https://limelightvision.github.io/limelightlib-public/LimelightLib-alpha5-6.json",
     "javaDependencies": [
         {
             "groupId": "com.limelightvision",
