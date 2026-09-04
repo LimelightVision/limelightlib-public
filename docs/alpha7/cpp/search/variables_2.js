@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['cameraid_0',['cameraId',['../structlimelight_1_1HardwareData.html#a57aeb73ca4eae41b788bd06b6682edcc',1,'limelight::HardwareData']]],
+  ['cameramatrix_1',['cameraMatrix',['../structlimelight_1_1CameraIntrinsics.html#ac82dd75d6378d7c863c0fb0b2f9d39e1',1,'limelight::CameraIntrinsics']]],
+  ['cameraposerobotspace_2',['cameraPoseRobotSpace',['../classlimelight_1_1LimelightResults.html#a71d974a97c5172fc11b0747cff8db338',1,'limelight::LimelightResults']]],
+  ['cameraposetargetspace_3',['cameraposetargetspace',['../structlimelight_1_1RetroTarget.html#a5f0c22ac8c9cfaac0c824f59ef9376c7',1,'limelight::RetroTarget::cameraPoseTargetSpace'],['../structlimelight_1_1FiducialTarget.html#a7290909ad2401f8138d02b0b073a908b',1,'limelight::FiducialTarget::cameraPoseTargetSpace']]],
+  ['capturelatencymillis_4',['captureLatencyMillis',['../classlimelight_1_1LimelightResults.html#a22a30ad2f3a1a1871675a8a42e538414',1,'limelight::LimelightResults']]],
+  ['classid_5',['classid',['../structlimelight_1_1DetectorTarget.html#acd1c071783e6308002f9ece08f6967c4',1,'limelight::DetectorTarget::classId'],['../structlimelight_1_1ClassifierTarget.html#a1998f0bc9c0d57357586b44e259db7cd',1,'limelight::ClassifierTarget::classId'],['../structlimelight_1_1CounterTarget.html#a485988bcd851e37426e7613e059c5308',1,'limelight::CounterTarget::classId']]],
+  ['classifiertargets_6',['classifierTargets',['../classlimelight_1_1LimelightResults.html#ad54af0d8c7caa03fb657924056c446b8',1,'limelight::LimelightResults']]],
+  ['classifiertargetsrejected_7',['classifierTargetsRejected',['../classlimelight_1_1LimelightResults.html#a92e204e83c32e9d7befc1f9d1bf1932f',1,'limelight::LimelightResults']]],
+  ['classname_8',['classname',['../structlimelight_1_1DetectorTarget.html#ae56d880496c420fb4c259e55397c1f5a',1,'limelight::DetectorTarget::className'],['../structlimelight_1_1CounterTarget.html#add23bca936e6a4ef49acc9aff51fb582',1,'limelight::CounterTarget::className'],['../structlimelight_1_1ClassifierTarget.html#a75ce4a78350a09024dd1d3358839d0ff',1,'limelight::ClassifierTarget::className']]],
+  ['confidence_9',['confidence',['../structlimelight_1_1DetectorTarget.html#afbe4fbbe8635ec9a7ab73062bfb2743e',1,'limelight::DetectorTarget::confidence'],['../structlimelight_1_1ClassifierTarget.html#a83389c0c340de447457f1a064b5396f9',1,'limelight::ClassifierTarget::confidence'],['../structlimelight_1_1OCRTarget.html#a83bf7d2f0dcc529e4fe07cd61f198c3c',1,'limelight::OCRTarget::confidence']]],
+  ['corners_10',['corners',['../structlimelight_1_1LimelightTarget.html#aa71b9a7eae5db65101e6b8b9f94bf06d',1,'limelight::LimelightTarget']]],
+  ['count_11',['count',['../structlimelight_1_1CounterTarget.html#a7badd0888c9545826fb1e82fb3b87e22',1,'limelight::CounterTarget']]],
+  ['countertargets_12',['counterTargets',['../classlimelight_1_1LimelightResults.html#a156fa5815bd5a1bb22846bb9ac521e00',1,'limelight::LimelightResults']]],
+  ['cputempcelsius_13',['cpuTempCelsius',['../structlimelight_1_1HardwareData.html#a74f8d677a8d31e110d0d42344f597135',1,'limelight::HardwareData']]],
+  ['cpuusagepercent_14',['cpuUsagePercent',['../structlimelight_1_1HardwareData.html#ae78494c7f65acd1500c83f1b0af0ebc5',1,'limelight::HardwareData']]],
+  ['customcalibration_15',['customCalibration',['../structlimelight_1_1CameraIntrinsics.html#a7d2c40d3b19c2be9066a96ceebf80768',1,'limelight::CameraIntrinsics']]]
+];

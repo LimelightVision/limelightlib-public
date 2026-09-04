@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['tagspanmeters_0',['tagspanmeters',['../classlimelight_1_1PoseEstimate.html#ae2ed3ccc9452424d2be10a93555c56b8',1,'limelight::PoseEstimate::tagSpanMeters'],['../classlimelight_1_1LimelightResults.html#a768647cd066a9b5ea0d7f4db9d96b079',1,'limelight::LimelightResults::tagSpanMeters']]],
+  ['targetareapercent_1',['targetareapercent',['../structlimelight_1_1LimelightTarget.html#abb02dc78a334b919337464e250500d3e',1,'limelight::LimelightTarget::targetAreaPercent'],['../classlimelight_1_1LimelightResults.html#a710d349ea5caf1ae03f6c49d5495413c',1,'limelight::LimelightResults::targetAreaPercent']]],
+  ['targetdistancemeters_2',['targetDistanceMeters',['../classlimelight_1_1LimelightResults.html#a50b1a1328e561f8cd4f98589765b0536',1,'limelight::LimelightResults']]],
+  ['targetinglatencymillis_3',['targetingLatencyMillis',['../classlimelight_1_1LimelightResults.html#a2568ae0011c6f8d2915c66b16f88b581',1,'limelight::LimelightResults']]],
+  ['targetposecameraspace_4',['targetposecameraspace',['../structlimelight_1_1RetroTarget.html#a07fdd71de982669efd5f210dc9fa6827',1,'limelight::RetroTarget::targetPoseCameraSpace'],['../structlimelight_1_1FiducialTarget.html#a172dc13ba7270a0cae07270799bb3ad3',1,'limelight::FiducialTarget::targetPoseCameraSpace']]],
+  ['targetposerobotspace_5',['targetposerobotspace',['../structlimelight_1_1RetroTarget.html#a82bcf9ccf03155a2c08f0b40e7c634f2',1,'limelight::RetroTarget::targetPoseRobotSpace'],['../structlimelight_1_1FiducialTarget.html#a3f48b46e3ec4a2a82f6bcdfbd3b5665d',1,'limelight::FiducialTarget::targetPoseRobotSpace']]],
+  ['telemetry_5ftable_6',['TELEMETRY_TABLE',['../classlimelight_1_1Limelight.html#a18dea933270b639ffd6e9c242d618832',1,'limelight::Limelight']]],
+  ['text_7',['text',['../structlimelight_1_1OCRTarget.html#a9b520186e46aa15943ccf652bd473508',1,'limelight::OCRTarget']]],
+  ['timestampmicros_8',['timestampMicros',['../classlimelight_1_1LimelightResults.html#a61338f96e3db4de8646a08dab7eb475b',1,'limelight::LimelightResults']]],
+  ['timestampmillis_9',['timestampMillis',['../classlimelight_1_1LimelightResults.html#a695a27be05a893ba222eb2fe4b0d61fa',1,'limelight::LimelightResults']]],
+  ['timestampseconds_10',['timestampSeconds',['../classlimelight_1_1PoseEstimate.html#a612b9d2d28946db6918146e17c405556',1,'limelight::PoseEstimate']]],
+  ['trackid_11',['trackId',['../structlimelight_1_1DetectorTarget.html#a825b61c4bfe01f38755301cdbf2c001d',1,'limelight::DetectorTarget']]],
+  ['txdegrees_12',['txdegrees',['../structlimelight_1_1LimelightTarget.html#aa9eacbc9aeaaf6131a36b0c454754535',1,'limelight::LimelightTarget::txDegrees'],['../classlimelight_1_1LimelightResults.html#a6f578e18ff25bba12f27040b94d0b46c',1,'limelight::LimelightResults::txDegrees']]],
+  ['txdegreesnocrosshair_13',['txdegreesnocrosshair',['../structlimelight_1_1LimelightTarget.html#abf3b92601ff08794ca5c47bb02787993',1,'limelight::LimelightTarget::txDegreesNoCrosshair'],['../classlimelight_1_1LimelightResults.html#ac12e6d82c3ddabe504dc39f4e6cde0d2',1,'limelight::LimelightResults::txDegreesNoCrosshair']]],
+  ['txpixels_14',['txPixels',['../structlimelight_1_1LimelightTarget.html#af290fb13edb6915ca0faf54ef391d3de',1,'limelight::LimelightTarget']]],
+  ['tydegrees_15',['tydegrees',['../structlimelight_1_1LimelightTarget.html#a148ddf674bdbaabd9198450bd046e475',1,'limelight::LimelightTarget::tyDegrees'],['../classlimelight_1_1LimelightResults.html#a0f1e0f9afb3584bd22693bf28822f77f',1,'limelight::LimelightResults::tyDegrees']]],
+  ['tydegreesnocrosshair_16',['tydegreesnocrosshair',['../structlimelight_1_1LimelightTarget.html#a7441ac53e6cb853b382cd8d13cb411ee',1,'limelight::LimelightTarget::tyDegreesNoCrosshair'],['../classlimelight_1_1LimelightResults.html#af1b799ed5d4c6b23509a93c9a85de549',1,'limelight::LimelightResults::tyDegreesNoCrosshair']]],
+  ['type_17',['type',['../classlimelight_1_1PoseEstimate.html#a05aa76283880871f217f2c8a760fb2df',1,'limelight::PoseEstimate']]],
+  ['typixels_18',['tyPixels',['../structlimelight_1_1LimelightTarget.html#afa8029d069ffe8c2797f0ea4db67a5a2',1,'limelight::LimelightTarget']]]
+];
