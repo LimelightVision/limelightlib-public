@@ -1,12 +1,14 @@
 // LimelightLib v2.0.0. Requires Limelight OS 2027.0 or later.
+
 // Copy this file to src/main/include/Limelight.h.
 
 #pragma once
 
 #include <algorithm>
 #include <array>
-#include <chrono>
 #include <cctype>
+#include <chrono>
+#include <cinttypes>
 #include <cmath>
 #include <cstdint>
 #include <cstdio>
@@ -25,29 +27,28 @@
 #include <utility>
 #include <vector>
 
-#include <wpi/math/geometry/Pose2d.hpp>
-#include <wpi/math/geometry/Pose3d.hpp>
-#include <wpi/math/geometry/Rotation2d.hpp>
-#include <wpi/math/geometry/Rotation3d.hpp>
-#include <wpi/math/geometry/Translation2d.hpp>
-#include <wpi/math/geometry/Translation3d.hpp>
-#include <wpi/math/geometry/struct/Pose2dStruct.hpp>
-#include <wpi/nt/BooleanTopic.hpp>
-#include <wpi/nt/DoubleArrayTopic.hpp>
-#include <wpi/nt/IntegerTopic.hpp>
-#include <wpi/nt/NetworkTable.hpp>
-#include <wpi/nt/NetworkTableEntry.hpp>
-#include <wpi/nt/NetworkTableInstance.hpp>
-#include <wpi/nt/RawTopic.hpp>
-#include <wpi/nt/StringTopic.hpp>
-#include <wpi/nt/StructArrayTopic.hpp>
-#include <wpi/nt/ntcore_cpp.hpp>
-#include <wpi/system/Filesystem.hpp>
-#include <wpi/units/angle.hpp>
-#include <wpi/units/length.hpp>
-#include <wpi/units/time.hpp>
-#include <wpi/util/array.hpp>
-
+#include "wpi/math/geometry/Pose2d.hpp"
+#include "wpi/math/geometry/Pose3d.hpp"
+#include "wpi/math/geometry/Rotation2d.hpp"
+#include "wpi/math/geometry/Rotation3d.hpp"
+#include "wpi/math/geometry/Translation2d.hpp"
+#include "wpi/math/geometry/Translation3d.hpp"
+#include "wpi/math/geometry/struct/Pose2dStruct.hpp"
+#include "wpi/nt/BooleanTopic.hpp"
+#include "wpi/nt/DoubleArrayTopic.hpp"
+#include "wpi/nt/IntegerTopic.hpp"
+#include "wpi/nt/NetworkTable.hpp"
+#include "wpi/nt/NetworkTableEntry.hpp"
+#include "wpi/nt/NetworkTableInstance.hpp"
+#include "wpi/nt/RawTopic.hpp"
+#include "wpi/nt/StringTopic.hpp"
+#include "wpi/nt/StructArrayTopic.hpp"
+#include "wpi/nt/ntcore_cpp.hpp"
+#include "wpi/system/Filesystem.hpp"
+#include "wpi/units/angle.hpp"
+#include "wpi/units/length.hpp"
+#include "wpi/units/time.hpp"
+#include "wpi/util/array.hpp"
 
 namespace limelight {
 
@@ -175,20 +176,28 @@ enum class LoadStatus {
   TOO_LARGE
 };
 
-inline PipelineConfigurationOverrideState ParsePipelineConfigurationOverrideState(
-    std::string_view s) {
-  if (s == "off") return PipelineConfigurationOverrideState::OFF;
-  if (s == "active") return PipelineConfigurationOverrideState::ACTIVE;
-  if (s == "forcedOff") return PipelineConfigurationOverrideState::FORCED_OFF;
-  if (s == "noString") return PipelineConfigurationOverrideState::NO_STRING;
-  if (s == "parseError") return PipelineConfigurationOverrideState::PARSE_ERROR;
+inline PipelineConfigurationOverrideState
+ParsePipelineConfigurationOverrideState(std::string_view s) {
+  if (s == "off")
+    return PipelineConfigurationOverrideState::OFF;
+  if (s == "active")
+    return PipelineConfigurationOverrideState::ACTIVE;
+  if (s == "forcedOff")
+    return PipelineConfigurationOverrideState::FORCED_OFF;
+  if (s == "noString")
+    return PipelineConfigurationOverrideState::NO_STRING;
+  if (s == "parseError")
+    return PipelineConfigurationOverrideState::PARSE_ERROR;
   return PipelineConfigurationOverrideState::UNKNOWN;
 }
 
 inline SharedMapState ParseSharedMapState(std::string_view s) {
-  if (s == "off") return SharedMapState::OFF;
-  if (s == "active") return SharedMapState::ACTIVE;
-  if (s == "parseError") return SharedMapState::PARSE_ERROR;
+  if (s == "off")
+    return SharedMapState::OFF;
+  if (s == "active")
+    return SharedMapState::ACTIVE;
+  if (s == "parseError")
+    return SharedMapState::PARSE_ERROR;
   return SharedMapState::UNKNOWN;
 }
 
@@ -312,7 +321,9 @@ struct FiducialTarget : public LimelightTarget {
   std::vector<double> robotPoseFieldSpaceMT2;
 
   /** @return 3D distance from the camera to this tag in meters */
-  double GetDistanceToCamera() const { return Distance3d(targetPoseCameraSpace); }
+  double GetDistanceToCamera() const {
+    return Distance3d(targetPoseCameraSpace);
+  }
 
   /** @return 3D distance from the robot center to this tag in meters */
   double GetDistanceToRobot() const { return Distance3d(targetPoseRobotSpace); }
@@ -337,12 +348,14 @@ struct FiducialTarget : public LimelightTarget {
     return ToPose3D(robotPoseTargetSpace);
   }
 
-  /** @return MegaTag1 robot pose in field space from this tag only, as a Pose3d */
+  /** @return MegaTag1 robot pose in field space from this tag only, as a Pose3d
+   */
   wpi::math::Pose3d GetRobotPose_FieldSpace() const {
     return ToPose3D(robotPoseFieldSpace);
   }
 
-  /** @return MegaTag2 robot pose in field space from this tag only, as a Pose3d */
+  /** @return MegaTag2 robot pose in field space from this tag only, as a Pose3d
+   */
   wpi::math::Pose3d GetRobotPose_FieldSpace_MT2() const {
     return ToPose3D(robotPoseFieldSpaceMT2);
   }
@@ -352,8 +365,7 @@ struct FiducialTarget : public LimelightTarget {
     if (pose.size() < 3) {
       return 0;
     }
-    return std::sqrt(pose[0] * pose[0] + pose[1] * pose[1] +
-                     pose[2] * pose[2]);
+    return std::sqrt(pose[0] * pose[0] + pose[1] * pose[1] + pose[2] * pose[2]);
   }
 };
 
@@ -548,12 +560,18 @@ enum class IMUMode {
 
 inline IMUMode IMUModeFromNT(int value) {
   switch (value) {
-    case 0: return IMUMode::EXTERNAL;
-    case 1: return IMUMode::EXTERNAL_SEED_INTERNAL;
-    case 2: return IMUMode::INTERNAL;
-    case 3: return IMUMode::INTERNAL_MT1_ASSIST;
-    case 4: return IMUMode::INTERNAL_EXTERNAL_ASSIST;
-    default: return IMUMode::UNKNOWN;
+    case 0:
+      return IMUMode::EXTERNAL;
+    case 1:
+      return IMUMode::EXTERNAL_SEED_INTERNAL;
+    case 2:
+      return IMUMode::INTERNAL;
+    case 3:
+      return IMUMode::INTERNAL_MT1_ASSIST;
+    case 4:
+      return IMUMode::INTERNAL_EXTERNAL_ASSIST;
+    default:
+      return IMUMode::UNKNOWN;
   }
 }
 
@@ -715,13 +733,13 @@ class LimelightResults {
                             barcodeTargets.size());
   }
 
-  /** @return MegaTag1 robot pose in field space. The origin is the field center */
+  /** @return MegaTag1 robot pose in field space. The origin is the field center
+   */
   wpi::math::Pose3d GetRobotPose_MT1() const { return ToPose3D(robotPoseMT1); }
 
-  /** @return MegaTag2 robot pose in field space. The origin is the field center */
-  wpi::math::Pose3d GetRobotPose_MT2() const {
-    return ToPose3D(robotPoseMT2);
-  }
+  /** @return MegaTag2 robot pose in field space. The origin is the field center
+   */
+  wpi::math::Pose3d GetRobotPose_MT2() const { return ToPose3D(robotPoseMT2); }
 
   /** @return The full 3D robot pose for the given estimate type. The type
    *          selects the origin and the algorithm */
@@ -995,7 +1013,9 @@ class PoseEstimateConfig {
    * Accepts every structurally valid pose. Uses a fixed 0.5 m XY standard
    * deviation. Heading is untrusted.
    */
-  static PoseEstimateConfig NoFiltering() { return NoFiltering(0.5, UNTRUSTED); }
+  static PoseEstimateConfig NoFiltering() {
+    return NoFiltering(0.5, UNTRUSTED);
+  }
 
   /**
    * Accepts every structurally valid pose. Uses the fixed standard deviations
@@ -1028,10 +1048,9 @@ class PoseEstimateConfig {
   PoseEstimateConfig& WithStdDevXY(double baseMeters, double minMeters,
                                    double maxMeters) {
     WithStdDevXY(baseMeters);
-    double lo = detail::ClampArg(minMeters, kMinXYStdDev, UNTRUSTED,
-                                 kMinXYStdDev);
-    double hi =
-        detail::ClampArg(maxMeters, kMinXYStdDev, UNTRUSTED, UNTRUSTED);
+    double lo =
+        detail::ClampArg(minMeters, kMinXYStdDev, UNTRUSTED, kMinXYStdDev);
+    double hi = detail::ClampArg(maxMeters, kMinXYStdDev, UNTRUSTED, UNTRUSTED);
     m_minXYStdDev = std::min(lo, hi);
     m_maxXYStdDev = std::max(lo, hi);
     return *this;
@@ -1053,7 +1072,8 @@ class PoseEstimateConfig {
     WithStdDevTheta(baseRadians);
     double lo = detail::ClampArg(minRadians, MIN_THETA_STD_DEV, UNTRUSTED,
                                  MIN_THETA_STD_DEV);
-    double hi = detail::ClampArg(maxRadians, MIN_THETA_STD_DEV, UNTRUSTED, UNTRUSTED);
+    double hi =
+        detail::ClampArg(maxRadians, MIN_THETA_STD_DEV, UNTRUSTED, UNTRUSTED);
     m_minThetaStdDev = std::min(lo, hi);
     m_maxThetaStdDev = std::max(lo, hi);
     return *this;
@@ -1075,8 +1095,8 @@ class PoseEstimateConfig {
                                                 double minMeters,
                                                 double maxMeters) {
     WithStdDevDistanceScaling(exponent);
-    double lo = detail::ClampArg(minMeters, 0,
-                                 std::numeric_limits<double>::max(), 0);
+    double lo =
+        detail::ClampArg(minMeters, 0, std::numeric_limits<double>::max(), 0);
     double hi =
         detail::ClampArg(maxMeters, 0, std::numeric_limits<double>::max(),
                          std::numeric_limits<double>::max());
@@ -1086,7 +1106,8 @@ class PoseEstimateConfig {
   }
 
   /** Divides the standard deviations by fieldedTagCount^exponent. The default
-   *  0.5 divides by the square root of the fielded tag count. 0 disables this. */
+   *  0.5 divides by the square root of the fielded tag count. 0 disables this.
+   */
   PoseEstimateConfig& WithStdDevTagCountDivision(double exponent) {
     m_tagCountExponent = detail::ClampArg(exponent, 0, 10, 0.5);
     return *this;
@@ -1168,8 +1189,8 @@ class PoseEstimate {
                                       PoseEstimateConfig::UNTRUSTED};
   /**
    * Standard deviations [x, y, z, roll, pitch, yaw] reported by the camera. The
-   * camera averages them over a long window. Use them for telemetry only. Do not
-   * give them to a pose estimator. Use stdDevs instead.
+   * camera averages them over a long window. Use them for telemetry only. Do
+   * not give them to a pose estimator. Use stdDevs instead.
    */
   std::vector<double> reportedStdDevs;
   /** The fiducials visible in this frame */
@@ -1218,15 +1239,14 @@ class PoseEstimate {
           " REJECTED:" + PoseEstimateConfig::DescribeRejection(rejectionFlags);
     }
     char buf[256];
-    std::snprintf(
-        buf, sizeof(buf),
-        "PoseEstimate(%.*s x=%.2f y=%.2f deg=%.1f fieldedTags=%d "
-        "reportedTags=%d avgDist=%.2f ts=%.3f%s)",
-        static_cast<int>(detail::PoseEstimateTypeName(type).size()),
-        detail::PoseEstimateTypeName(type).data(), pose.X().value(),
-        pose.Y().value(), pose.Rotation().Degrees().value(), fieldedTagCount,
-        reportedTagCount, avgTagDistanceMeters, timestampSeconds.value(),
-        rejection.c_str());
+    std::snprintf(buf, sizeof(buf),
+                  "PoseEstimate(%.*s x=%.2f y=%.2f deg=%.1f fieldedTags=%d "
+                  "reportedTags=%d avgDist=%.2f ts=%.3f%s)",
+                  static_cast<int>(detail::PoseEstimateTypeName(type).size()),
+                  detail::PoseEstimateTypeName(type).data(), pose.X().value(),
+                  pose.Y().value(), pose.Rotation().Degrees().value(),
+                  fieldedTagCount, reportedTagCount, avgTagDistanceMeters,
+                  timestampSeconds.value(), rejection.c_str());
     return std::string{buf};
   }
 };
@@ -1247,10 +1267,9 @@ inline constexpr std::array<int, 11> kRejectionFlags = {
     PoseEstimateConfig::REJECT_NO_FIELDED_TAGS};
 
 inline constexpr std::array<std::string_view, 11> kRejectionNames = {
-    "TAG_COUNT",    "AMBIGUITY",    "TAG_DISTANCE",
-    "TAG_AREA",     "FIELD_BOUNDS", "DECODE_ERROR",
-    "NONFINITE",    "NO_TIMESTAMP", "MISSING_POSE",
-    "BAD_METADATA", "NO_FIELDED_TAGS"};
+    "TAG_COUNT",    "AMBIGUITY",    "TAG_DISTANCE",   "TAG_AREA",
+    "FIELD_BOUNDS", "DECODE_ERROR", "NONFINITE",      "NO_TIMESTAMP",
+    "MISSING_POSE", "BAD_METADATA", "NO_FIELDED_TAGS"};
 
 }  // namespace detail
 
@@ -1741,8 +1760,7 @@ class MsgPackReader {
   }
 
   void SkipBytes(int64_t count) {
-    if (count < 0 ||
-        static_cast<uint64_t>(count) > m_buf.size() - m_pos) {
+    if (count < 0 || static_cast<uint64_t>(count) > m_buf.size() - m_pos) {
       throw std::runtime_error("truncated msgpack value near byte " +
                                std::to_string(m_pos));
     }
@@ -1782,8 +1800,8 @@ class MsgPackReader {
   int m_skipDepth = 0;
 };
 
-inline bool DecodeCommonTargetKey(LimelightTarget& target,
-                                  std::string_view key, MsgPackReader& r) {
+inline bool DecodeCommonTargetKey(LimelightTarget& target, std::string_view key,
+                                  MsgPackReader& r) {
   if (key == "tx") {
     target.txDegrees = r.ReadDouble();
   } else if (key == "ty") {
@@ -1918,8 +1936,7 @@ inline std::vector<DetectorTarget> DecodeDetectorTargets(MsgPackReader& r) {
   return out;
 }
 
-inline std::vector<ClassifierTarget> DecodeClassifierTargets(
-    MsgPackReader& r) {
+inline std::vector<ClassifierTarget> DecodeClassifierTargets(MsgPackReader& r) {
   int n = r.ReadArrayHeader();
   std::vector<ClassifierTarget> out;
   for (int i = 0; i < n; i++) {
@@ -2059,7 +2076,8 @@ inline void DecodeIMU(MsgPackReader& r, IMUData& imu) {
     } else if (key == "yaw_offset") {
       imu.yawOffsetDegrees = r.ReadDouble();
     } else if (key == "data") {
-      // The "yaw" key carries the same fused yaw as data[0]. The array is the single source.
+      // The "yaw" key carries the same fused yaw as data[0]. The array is the
+      // single source.
       std::vector<double> d = r.ReadDoubleArray();
       if (d.size() >= 10) {
         imu.robotYawDegrees = d[0];
@@ -2314,7 +2332,6 @@ enum class LEDMode {
   FORCE_ON = 3
 };
 
-
 /**
  * AprilTag detector downscaling factors. More downscaling improves
  * performance. It can reduce the detection range.
@@ -2341,22 +2358,25 @@ namespace detail {
 class PoseTelemetry {
  public:
   PoseTelemetry(wpi::nt::NetworkTable& telemetryTable,
-                wpi::nt::NetworkTable& fieldTable, const std::string& cameraName,
-                PoseEstimateType type) {
+                wpi::nt::NetworkTable& fieldTable,
+                const std::string& cameraName, PoseEstimateType type) {
     std::string typeName{PoseEstimateTypeName(type)};
     std::string prefix = typeName + "/";
-    m_accepted = telemetryTable
-                     .GetStructArrayTopic<wpi::math::Pose2d>(prefix + "accepted")
-                     .Publish();
-    m_rejected = telemetryTable
-                     .GetStructArrayTopic<wpi::math::Pose2d>(prefix + "rejected")
-                     .Publish();
+    m_accepted =
+        telemetryTable
+            .GetStructArrayTopic<wpi::math::Pose2d>(prefix + "accepted")
+            .Publish();
+    m_rejected =
+        telemetryTable
+            .GetStructArrayTopic<wpi::math::Pose2d>(prefix + "rejected")
+            .Publish();
     m_rejectionReasons =
         telemetryTable.GetStringTopic(prefix + "rejectionReasons").Publish();
     m_fieldAccepted =
         fieldTable.GetDoubleArrayTopic(cameraName + "-" + typeName).Publish();
     m_fieldRejected =
-        fieldTable.GetDoubleArrayTopic(cameraName + "-" + typeName + "-rejected")
+        fieldTable
+            .GetDoubleArrayTopic(cameraName + "-" + typeName + "-rejected")
             .Publish();
   }
 
@@ -2514,21 +2534,24 @@ class PoseCountsTelemetry {
  * limelight::PoseEstimateConfig mt1Config =
  *     limelight::PoseEstimateConfig::DefaultMT1()
  *         .WithMinTagCount(1)
- *         .WithMaxSingleTagAmbiguity(0.7) // MT1 needs low-ambiguity perspectives
- *         .WithMaxSingleTagDistance(3.0) // If we only see one tag, don't trust it unless we are at most 3m away from it
- *         .WithMaxAvgTagDistance(6.0) // If we see multiple tags, max avg distance must be less than 6 meters.
+ *         .WithMaxSingleTagAmbiguity(0.7) // MT1 needs low-ambiguity
+ * perspectives .WithMaxSingleTagDistance(3.0) // If we only see one tag, don't
+ * trust it unless we are at most 3m away from it .WithMaxAvgTagDistance(6.0) //
+ * If we see multiple tags, max avg distance must be less than 6 meters.
  *         .WithMinAvgTagArea(0.05)
- *         .WithFieldBounds(16.541, 8.069) // Reject pose estimates that are out of bounds.
- *         .WithFieldBoundsMargin(0.5) // Reject pose estimates that are out of bounds +.5m
- *         .WithStdDevXY(0.5, 0.05, 2.0) // .5 base, absolute min .05, absolute max 2.0
- *         .WithStdDevTheta(untrusted, untrusted, untrusted) // never incorporate pose estimate rotation. You may want to incorporate rotation by setting these to other values
- *         .WithStdDevDistanceScaling(1.0, 0.0, 6.0) // linear scaling
- *         .WithStdDevTagCountDivision(0.5);
+ *         .WithFieldBounds(16.541, 8.069) // Reject pose estimates that are out
+ * of bounds. .WithFieldBoundsMargin(0.5) // Reject pose estimates that are out
+ * of bounds +.5m .WithStdDevXY(0.5, 0.05, 2.0) // .5 base, absolute min .05,
+ * absolute max 2.0 .WithStdDevTheta(untrusted, untrusted, untrusted) // never
+ * incorporate pose estimate rotation. You may want to incorporate rotation by
+ * setting these to other values .WithStdDevDistanceScaling(1.0, 0.0, 6.0) //
+ * linear scaling .WithStdDevTagCountDivision(0.5);
  *
  * limelight::PoseEstimateConfig mt2Config =
  *     limelight::PoseEstimateConfig::DefaultMT2()
  *         .WithMinTagCount(1)
- *         .WithMaxSingleTagAmbiguity(1.0) // MT2 can handle maximally ambiguous perspectives. Accept tags regardless of ambiguity value.
+ *         .WithMaxSingleTagAmbiguity(1.0) // MT2 can handle maximally ambiguous
+ * perspectives. Accept tags regardless of ambiguity value.
  *         .WithMaxSingleTagDistance(0.0) // 0 disables this check
  *         .WithMaxAvgTagDistance(8.0)
  *         .WithMinAvgTagArea(0.02)
@@ -2536,7 +2559,8 @@ class PoseCountsTelemetry {
  *         .WithFieldBoundsMargin(0.5)
  *         .WithStdDevXY(0.3, 0.0001, 2.0)
  *         .WithStdDevTheta(untrusted, untrusted, untrusted)
- *         .WithStdDevDistanceScaling(0.5, 0.0, 8.0) // Less aggressive STDDev scaling for MT2. Scale by sqrt(distance) rather than distance^1.
+ *         .WithStdDevDistanceScaling(0.5, 0.0, 8.0) // Less aggressive STDDev
+ * scaling for MT2. Scale by sqrt(distance) rather than distance^1.
  *         .WithStdDevTagCountDivision(0.5);
  *
  * wpi::math::Pose3d cameraPoseRobotSpace{0.30_m, 0.0_m, 0.20_m,
@@ -2545,8 +2569,9 @@ class PoseCountsTelemetry {
  *     limelight::Limelight{"limelight", cameraPoseRobotSpace}
  *         .WithPoseEstimateConfig_MT1(mt1Config)
  *         .WithPoseEstimateConfig_MT2(mt2Config)
- *         .WithTelemetry(true); // Keep automatic telemetry enabled. All accepted and rejected poses will remain easy to visualize in standard dashboards
- * bool useMegaTag2 = true;
+ *         .WithTelemetry(true); // Keep automatic telemetry enabled. All
+ * accepted and rejected poses will remain easy to visualize in standard
+ * dashboards bool useMegaTag2 = true;
  *
  * // Each robot loop
  * limelight::PoseEstimateType type =
@@ -2682,17 +2707,17 @@ class Limelight {
    */
   Limelight(std::string_view name, double forward, double left, double up,
             double rollDegrees, double pitchDegrees, double yawDegrees)
-      : Limelight(name,
-                  wpi::math::Pose3d{
-                      wpi::units::meter_t{forward}, wpi::units::meter_t{left},
-                      wpi::units::meter_t{up},
-                      wpi::math::Rotation3d{
-                          wpi::units::radian_t{
-                              detail::DegreesToRadians(rollDegrees)},
-                          wpi::units::radian_t{
-                              detail::DegreesToRadians(pitchDegrees)},
-                          wpi::units::radian_t{
-                              detail::DegreesToRadians(yawDegrees)}}}) {}
+      : Limelight(
+            name,
+            wpi::math::Pose3d{
+                wpi::units::meter_t{forward}, wpi::units::meter_t{left},
+                wpi::units::meter_t{up},
+                wpi::math::Rotation3d{
+                    wpi::units::radian_t{detail::DegreesToRadians(rollDegrees)},
+                    wpi::units::radian_t{
+                        detail::DegreesToRadians(pitchDegrees)},
+                    wpi::units::radian_t{
+                        detail::DegreesToRadians(yawDegrees)}}}) {}
 
   Limelight(const Limelight&) = delete;
   Limelight& operator=(const Limelight&) = delete;
@@ -2715,9 +2740,8 @@ class Limelight {
    * @return this, for chaining with the constructor
    */
   Limelight& WithStaleFrameThreshold(double seconds) & {
-    m_staleFrameSeconds =
-        detail::ClampArg(seconds, 0.01, std::numeric_limits<double>::max(),
-                         STALE_FRAME_SECONDS);
+    m_staleFrameSeconds = detail::ClampArg(
+        seconds, 0.01, std::numeric_limits<double>::max(), STALE_FRAME_SECONDS);
     return *this;
   }
 
@@ -2808,7 +2832,9 @@ class Limelight {
    * @return The msgpack envelope protocol version from the camera. 0 if the
    *         camera has not connected or runs old software
    */
-  int GetProtocolVersion() { return static_cast<int>(m_protocolVersionSubscriber.Get()); }
+  int GetProtocolVersion() {
+    return static_cast<int>(m_protocolVersionSubscriber.Get());
+  }
 
   // ---- Results ----
 
@@ -2856,10 +2882,9 @@ class Limelight {
     } catch (const std::exception& e) {
       results.error = std::string{"llmsgpack decode error: "} + e.what();
     }
-    results.parseLatencyMillis =
-        std::chrono::duration<double, std::milli>(
-            std::chrono::steady_clock::now() - start)
-            .count();
+    results.parseLatencyMillis = std::chrono::duration<double, std::milli>(
+                                     std::chrono::steady_clock::now() - start)
+                                     .count();
     return results;
   }
 
@@ -2878,7 +2903,8 @@ class Limelight {
   static LimelightResults Decode(std::span<const uint8_t> envelope,
                                  int64_t receiveTimestampMicros) {
     LimelightResults results = Decode(envelope);
-    results.receiveTimestampSeconds = receiveTimestampMicros / NT_TICKS_PER_SECOND;
+    results.receiveTimestampSeconds =
+        receiveTimestampMicros / NT_TICKS_PER_SECOND;
     return results;
   }
 
@@ -2981,12 +3007,16 @@ class Limelight {
   /**
    * @return Targeting/pipeline latency in milliseconds
    */
-  double GetTargetingLatencyMillis() { return GetLatestResults().targetingLatencyMillis; }
+  double GetTargetingLatencyMillis() {
+    return GetLatestResults().targetingLatencyMillis;
+  }
 
   /**
    * @return Capture latency in milliseconds
    */
-  double GetCaptureLatencyMillis() { return GetLatestResults().captureLatencyMillis; }
+  double GetCaptureLatencyMillis() {
+    return GetLatestResults().captureLatencyMillis;
+  }
 
   /**
    * @return IMU state from the latest frame
@@ -3125,8 +3155,8 @@ class Limelight {
    */
   std::vector<PoseEstimate> ReadAcceptedPoseEstimates(PoseEstimateType type) {
     std::vector<PoseEstimate> all = ReadPoseEstimateQueue(type);
-    std::erase_if(all,
-                  [](const PoseEstimate& estimate) { return !estimate.IsValid(); });
+    std::erase_if(
+        all, [](const PoseEstimate& estimate) { return !estimate.IsValid(); });
     return all;
   }
 
@@ -3198,7 +3228,8 @@ class Limelight {
     const std::vector<double>& poseArray = detail::PoseArray(results, type);
 
     estimate.frameIndex = results.frameIndex;
-    estimate.latencyMillis = results.captureLatencyMillis + results.targetingLatencyMillis;
+    estimate.latencyMillis =
+        results.captureLatencyMillis + results.targetingLatencyMillis;
     estimate.timestampSeconds = wpi::units::second_t{
         results.receiveTimestampSeconds - (estimate.latencyMillis / 1000.0)};
     estimate.reportedTagCount = results.reportedTagCount;
@@ -3250,20 +3281,22 @@ class Limelight {
    * @param pipelineIndex Pipeline index (0-9)
    */
   void SetPipelineIndex(int pipelineIndex) {
-    m_table->GetEntry("pipeline").SetDouble(
-        static_cast<int>(detail::ClampArg(pipelineIndex, 0, 9)));
+    m_table->GetEntry("pipeline")
+        .SetDouble(static_cast<int>(detail::ClampArg(pipelineIndex, 0, 9)));
   }
-
 
   /**
    * An immutable, validated pipeline configuration override. It holds the
    * contents of a .vpr file. Create it one time during robot initialization.
    * All file IO and size validation happen at that time. Then publish it at
-   * any time with SetPipelineConfigurationOverride(const PipelineConfiguration&).
+   * any time with SetPipelineConfigurationOverride(const
+   * PipelineConfiguration&).
    * @code
    * // RobotInit
-   * auto aiming = limelight::Limelight::PipelineConfiguration::FromDeployFolder("aiming");
-   * auto intake = limelight::Limelight::PipelineConfiguration::FromDeployFolder("intake");
+   * auto aiming =
+   * limelight::Limelight::PipelineConfiguration::FromDeployFolder("aiming");
+   * auto intake =
+   * limelight::Limelight::PipelineConfiguration::FromDeployFolder("intake");
    * // mid-match
    * camera.SetPipelineConfigurationOverride(aiming);
    * @endcode
@@ -3305,8 +3338,8 @@ class Limelight {
      * prints a warning and returns a configuration that is not valid.
      *
      * @param deployRelativePath The pipeline file relative to the deploy
-     *        directory, for example "aiming" or "pipelines/aiming.vpr". ".vpr" is
-     *        added when missing
+     *        directory, for example "aiming" or "pipelines/aiming.vpr". ".vpr"
+     * is added when missing
      * @return The loaded configuration. Check IsValid()
      */
     static PipelineConfiguration FromDeployFolder(
@@ -3351,7 +3384,8 @@ class Limelight {
    * between several prepared configurations during a match:
    * @code
    * // RobotInit
-   * auto aiming = limelight::Limelight::PipelineConfiguration::FromDeployFolder("aiming");
+   * auto aiming =
+   * limelight::Limelight::PipelineConfiguration::FromDeployFolder("aiming");
    * // whenever
    * camera.SetPipelineConfigurationOverride(aiming);
    * camera.SetUsePipelineConfigurationOverride(true);
@@ -3380,13 +3414,12 @@ class Limelight {
     FlushNT();
   }
 
-
   /**
    * Enables or disables the pipeline configuration override. While enabled, the
    * camera runs the pipeline published with SetPipelineConfigurationOverride().
-   * While disabled, the camera runs the pipeline selected by SetPipelineIndex().
-   * The published override stays on the camera in both states. You can switch
-   * between the two at any time.
+   * While disabled, the camera runs the pipeline selected by
+   * SetPipelineIndex(). The published override stays on the camera in both
+   * states. You can switch between the two at any time.
    *
    * @param use True to run the override. False to run the indexed pipeline
    */
@@ -3427,8 +3460,6 @@ class Limelight {
   SharedMapState GetSharedMapState() {
     return GetLatestResults().sharedMapState;
   }
-
-
 
   /**
    * An immutable, validated shared field map. It holds the contents of an .fmap
@@ -3471,9 +3502,9 @@ class Limelight {
     }
 
     /**
-     * Reads an .fmap field map file from the deploy directory of the robot program
-     * (src/main/deploy in the robot project). If the read fails, this method
-     * prints a warning and returns a field map that is not valid.
+     * Reads an .fmap field map file from the deploy directory of the robot
+     * program (src/main/deploy in the robot project). If the read fails, this
+     * method prints a warning and returns a field map that is not valid.
      *
      * @param deployRelativePath The field map file relative to the deploy
      *        directory, for example "field" or "maps/field.fmap". ".fmap" is
@@ -3550,8 +3581,8 @@ class Limelight {
    */
   void SetPriorityTagIDOverride(int id) {
     m_table->GetEntry("priorityid")
-        .SetDouble(static_cast<int>(detail::ClampArg(
-            id, -1, std::numeric_limits<int>::max())));
+        .SetDouble(static_cast<int>(
+            detail::ClampArg(id, -1, std::numeric_limits<int>::max())));
   }
 
   /** Clears the priority AprilTag ID override. tx/ty targeting returns to the
@@ -3576,7 +3607,7 @@ class Limelight {
    * @param cropYMax Maximum Y value (-1 to 1)
    */
   void SetCropWindowOverride(double cropXMin, double cropXMax, double cropYMin,
-                     double cropYMax) {
+                             double cropYMax) {
     double xMin = detail::ClampArg(std::min(cropXMin, cropXMax), -1, 1, -1);
     double xMax = detail::ClampArg(std::max(cropXMin, cropXMax), -1, 1, 1);
     double yMin = detail::ClampArg(std::min(cropYMin, cropYMax), -1, 1, -1);
@@ -3597,9 +3628,8 @@ class Limelight {
    * @param vertical Vertical keystone value (-0.95 to 0.95)
    */
   void SetKeystoneOverride(double horizontal, double vertical) {
-    std::array<double, 2> keystone{
-        detail::ClampArg(horizontal, -0.95, 0.95, 0),
-        detail::ClampArg(vertical, -0.95, 0.95, 0)};
+    std::array<double, 2> keystone{detail::ClampArg(horizontal, -0.95, 0.95, 0),
+                                   detail::ClampArg(vertical, -0.95, 0.95, 0)};
     m_table->GetEntry("keystone_set").SetDoubleArray(keystone);
   }
 
@@ -3619,8 +3649,7 @@ class Limelight {
    * @param up Up (z) offset from the target in meters
    */
   void SetFiducial3DOffsetOverride(double forward, double left, double up) {
-    if (!(std::isfinite(forward) && std::isfinite(left) &&
-          std::isfinite(up))) {
+    if (!(std::isfinite(forward) && std::isfinite(left) && std::isfinite(up))) {
       return;
     }
     std::array<double, 3> offset{forward, left, up};
@@ -3638,7 +3667,7 @@ class Limelight {
    */
   void SetFiducial3DOffsetOverride(const wpi::math::Translation3d& offset) {
     SetFiducial3DOffsetOverride(offset.X().value(), offset.Y().value(),
-                        offset.Z().value());
+                                offset.Z().value());
   }
 
   /** Clears the fiducial 3D offset override. The 3D targeting point returns to
@@ -3745,8 +3774,8 @@ class Limelight {
           std::isfinite(roll) && std::isfinite(rollRate))) {
       return;
     }
-    std::array<double, 6> orientation{yaw, yawRate, pitch,
-                                      pitchRate, roll, rollRate};
+    std::array<double, 6> orientation{yaw,       yawRate, pitch,
+                                      pitchRate, roll,    rollRate};
     wpi::nt::NetworkTableInstance::GetDefault()
         .GetTable("limelightshared")
         ->GetEntry("robot_orientation_set")
@@ -3789,8 +3818,8 @@ class Limelight {
   }
 
   /**
-   * Overrides the valid AprilTag IDs for localization. Tags not in this list are
-   * ignored for robot pose estimation. They do not get the "fielded" flag.
+   * Overrides the valid AprilTag IDs for localization. Tags not in this list
+   * are ignored for robot pose estimation. They do not get the "fielded" flag.
    * @param validIDs Valid AprilTag IDs to track
    */
   void SetFiducialIDFiltersOverride(std::span<const int> validIDs) {
@@ -3799,8 +3828,7 @@ class Limelight {
     for (int id : validIDs) {
       validIDsDouble.push_back(std::max(0, id));
     }
-    m_table->GetEntry("fiducial_id_filters_set")
-        .SetDoubleArray(validIDsDouble);
+    m_table->GetEntry("fiducial_id_filters_set").SetDoubleArray(validIDsDouble);
   }
 
   /** Clears the AprilTag ID filter override. The camera returns to the ID
@@ -3839,8 +3867,8 @@ class Limelight {
    *        update several cameras in one loop. Then call FlushNT() one time.
    */
   void SetCameraPose_RobotSpaceOverride(double forward, double left, double up,
-                                double roll, double pitch, double yaw,
-                                bool flush) {
+                                        double roll, double pitch, double yaw,
+                                        bool flush) {
     PublishCameraPose(forward, left, up, roll, pitch, yaw);
     if (flush) {
       FlushNT();
@@ -3858,8 +3886,8 @@ class Limelight {
    * @param flush True to flush NetworkTables immediately. Pass false when you
    *        update several cameras in one loop. Then call FlushNT() one time.
    */
-  void SetCameraPose_RobotSpaceOverride(const wpi::math::Pose3d& cameraPoseRobotSpace,
-                                bool flush) {
+  void SetCameraPose_RobotSpaceOverride(
+      const wpi::math::Pose3d& cameraPoseRobotSpace, bool flush) {
     SetCameraPose_RobotSpaceOverride(
         cameraPoseRobotSpace.X().value(), cameraPoseRobotSpace.Y().value(),
         cameraPoseRobotSpace.Z().value(),
@@ -3913,8 +3941,8 @@ class Limelight {
     std::vector<double> currentArray =
         m_table->GetEntry("capture_rewind").GetDoubleArray({});
     double counter = !currentArray.empty() ? currentArray[0] : 0;
-    std::array<double, 2> capture{
-        counter + 1, detail::ClampArg(durationSeconds, 1, 165)};
+    std::array<double, 2> capture{counter + 1,
+                                  detail::ClampArg(durationSeconds, 1, 165)};
     m_table->GetEntry("capture_rewind").SetDoubleArray(capture);
   }
 
@@ -3943,10 +3971,10 @@ class Limelight {
       m_protocolWarningPrinted = true;
       std::fprintf(
           stderr,
-          "Limelight - %s: camera protocol version %lld is newer than this "
-          "library supports (%d). Update Limelight.h. Results may be missing "
-          "or wrong.\n",
-          m_name.c_str(), static_cast<long long>(version),
+          "Limelight - %s: camera protocol version %" PRId64
+          " is newer than this library supports (%d). Update Limelight.h. "
+          "Results may be missing or wrong.\n",
+          m_name.c_str(), static_cast<int64_t>(version),
           SUPPORTED_PROTOCOL_VERSION);
     }
   }
@@ -4005,7 +4033,8 @@ class Limelight {
     std::fflush(stdout);
   }
 
-  static bool EndsWithIgnoreCase(std::string_view text, std::string_view suffix) {
+  static bool EndsWithIgnoreCase(std::string_view text,
+                                 std::string_view suffix) {
     if (suffix.size() > text.size()) {
       return false;
     }
@@ -4034,7 +4063,8 @@ class Limelight {
         return std::nullopt;
       }
       return ReadFileForNT(
-          std::filesystem::path{wpi::filesystem::GetDeployDirectory()} / relative,
+          std::filesystem::path{wpi::filesystem::GetDeployDirectory()} /
+              relative,
           what);
     } catch (const std::exception& e) {
       WarnLoader(std::string{"could not resolve the deploy directory: "} +
@@ -4085,8 +4115,8 @@ class Limelight {
       return;
     }
     SetUseSharedOrientation(false);
-    std::array<double, 6> orientation{yaw, yawRate, pitch,
-                                      pitchRate, roll, rollRate};
+    std::array<double, 6> orientation{yaw,       yawRate, pitch,
+                                      pitchRate, roll,    rollRate};
     m_table->GetEntry("robot_orientation_set").SetDoubleArray(orientation);
     if (flush) {
       FlushNT();
