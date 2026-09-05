@@ -1,6 +1,6 @@
-// LimelightLib v2.0.0. Requires Limelight OS 2027.0 or later.
-
-// Copy this file to src/main/include/Limelight.h.
+// Copyright (c) 2026 Limelight Vision. All rights reserved.
+// Open Source Software; you can modify and/or share it under the terms of
+// the MIT license file in the root directory of this project.
 
 #pragma once
 
@@ -8,7 +8,6 @@
 #include <array>
 #include <cctype>
 #include <chrono>
-#include <cinttypes>
 #include <cmath>
 #include <cstdint>
 #include <cstdio>
@@ -44,10 +43,12 @@
 #include "wpi/nt/StringTopic.hpp"
 #include "wpi/nt/StructArrayTopic.hpp"
 #include "wpi/nt/ntcore_cpp.hpp"
+#include "wpi/system/Errors.hpp"
 #include "wpi/system/Filesystem.hpp"
 #include "wpi/units/angle.hpp"
 #include "wpi/units/length.hpp"
 #include "wpi/units/time.hpp"
+#include "wpi/util/UsageReporting.hpp"
 #include "wpi/util/array.hpp"
 
 namespace limelight {
@@ -836,12 +837,14 @@ class PoseEstimate;
  * one fielded tag. It uses the same standard deviation model as DefaultMT2().
  *
  * @code
- * limelight::Limelight camera{"limelight"};
+ * using limelight::Limelight;
+ * using limelight::PoseEstimateConfig;
+ * Limelight camera{"limelight"};
  * camera
- *     .WithPoseEstimateConfig_MT1(limelight::PoseEstimateConfig::DefaultMT1()
+ *     .WithPoseEstimateConfig_MT1(PoseEstimateConfig::DefaultMT1()
  *         .WithMinTagCount(2)
  *         .WithFieldBounds(17.55, 8.05))
- *     .WithPoseEstimateConfig_MT2(limelight::PoseEstimateConfig::DefaultMT2()
+ *     .WithPoseEstimateConfig_MT2(PoseEstimateConfig::DefaultMT2()
  *         .WithMaxAvgTagDistance(4.0)
  *         .WithFieldBounds(17.55, 8.05));
  * @endcode
@@ -1368,11 +1371,9 @@ inline wpi::util::array<double, 3> PoseEstimateConfig::Compute(
 namespace detail {
 
 // Minimal, allocation-light MessagePack reader covering the full msgpack spec
-// as produced by the camera (nil, bool, all int/uint widths, float32/64,
+// (nil, bool, all int/uint widths, float32/64,
 // str, bin, array, map, with skippable ext types). Nil is read leniently as
-// 0 / "" / empty so absent optional data never throws. Unlike the Java
-// implementation, which relies on array bounds exceptions for truncated
-// envelopes, every read is explicitly bounds-checked.
+// 0 / "" / empty so absent optional data never throws.
 class MsgPackReader {
  public:
   explicit MsgPackReader(std::span<const uint8_t> buf) : m_buf{buf} {}
@@ -2476,9 +2477,11 @@ class PoseCountsTelemetry {
  * <h3>Visual servoing</h3>
  * @code
  * double turnKp = -0.02;
- * limelight::Limelight camera{"limelight"};
- * //limelight::Limelight camera{limelight::Limelight::SYSTEMCORE_USB0};
- * //limelight::Limelight camera{limelight::Limelight::SYSTEMCORE_USB1};
+ * using limelight::Limelight;
+ * Limelight camera{"limelight"};
+ * // Systemcore USB vision instances:
+ * // Limelight camera{Limelight::SYSTEMCORE_USB0};
+ * // Limelight camera{Limelight::SYSTEMCORE_USB1};
  *
  * // Each loop
  * double turn = joystick.GetRightX();
@@ -2650,6 +2653,7 @@ class Limelight {
       name = "limelight";
     }
     m_name = std::string{name};
+    wpi::util::ReportUsage("Limelight", m_name);
     m_latestResults.fromLiveSubscriber = true;
     m_table = wpi::nt::NetworkTableInstance::GetDefault().GetTable(m_name);
     m_telemetryTable = wpi::nt::NetworkTableInstance::GetDefault().GetTable(
@@ -3293,10 +3297,9 @@ class Limelight {
    * PipelineConfiguration&).
    * @code
    * // RobotInit
-   * auto aiming =
-   * limelight::Limelight::PipelineConfiguration::FromDeployFolder("aiming");
-   * auto intake =
-   * limelight::Limelight::PipelineConfiguration::FromDeployFolder("intake");
+   * using limelight::Limelight;
+   * auto aiming = Limelight::PipelineConfiguration::FromDeployFolder("aiming");
+   * auto intake = Limelight::PipelineConfiguration::FromDeployFolder("intake");
    * // mid-match
    * camera.SetPipelineConfigurationOverride(aiming);
    * @endcode
@@ -3384,8 +3387,8 @@ class Limelight {
    * between several prepared configurations during a match:
    * @code
    * // RobotInit
-   * auto aiming =
-   * limelight::Limelight::PipelineConfiguration::FromDeployFolder("aiming");
+   * using limelight::Limelight;
+   * auto aiming = Limelight::PipelineConfiguration::FromDeployFolder("aiming");
    * // whenever
    * camera.SetPipelineConfigurationOverride(aiming);
    * camera.SetUsePipelineConfigurationOverride(true);
@@ -3468,8 +3471,9 @@ class Limelight {
    * SetSharedMap(const FieldMap&):
    * @code
    * // RobotInit
-   * auto fieldMap = limelight::Limelight::FieldMap::FromDeployFolder("field");
-   * limelight::Limelight::SetSharedMap(fieldMap);
+   * using limelight::Limelight;
+   * auto fieldMap = Limelight::FieldMap::FromDeployFolder("field");
+   * Limelight::SetSharedMap(fieldMap);
    * @endcode
    *
    * A failed load produces an instance where IsValid() is false.
@@ -3969,13 +3973,11 @@ class Limelight {
     int64_t version = m_protocolVersionSubscriber.Get();
     if (version > SUPPORTED_PROTOCOL_VERSION && !m_protocolWarningPrinted) {
       m_protocolWarningPrinted = true;
-      std::fprintf(
-          stderr,
-          "Limelight - %s: camera protocol version %" PRId64
-          " is newer than this library supports (%d). Update Limelight.h. "
-          "Results may be missing or wrong.\n",
-          m_name.c_str(), static_cast<int64_t>(version),
-          SUPPORTED_PROTOCOL_VERSION);
+      WPILIB_ReportWarning(
+          "Limelight - {}: camera protocol version {} is newer than this "
+          "library supports ({}). Update Limelight.h. Results may be missing "
+          "or wrong.",
+          m_name, version, SUPPORTED_PROTOCOL_VERSION);
     }
   }
 
@@ -4028,8 +4030,10 @@ class Limelight {
 
   // Loader failures print a single line to stdout (flushed, so it shows up in
   // robot service logs) and never throw.
+  // Loader warnings go to the Driver Station console like other WPILib
+  // warnings.
   static void WarnLoader(const std::string& message) {
-    std::fprintf(stdout, "Limelight - %s\n", message.c_str());
+    WPILIB_ReportWarning("Limelight - {}", message);
     std::fflush(stdout);
   }
 

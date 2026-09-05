@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta7-alpha7</span>
+   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta8-alpha7</span>
    </div>
    <div id="projectbrief">Limelight interface for WPILib C++ projects</div>
   </td>
@@ -131,13 +131,13 @@ Friends</h2></td></tr>
 <div class="textblock"><p>An immutable, validated pipeline configuration override. </p>
 <p>It holds the contents of a .vpr file. Create it one time during robot initialization. All file IO and size validation happen at that time. Then publish it at any time with <a class="el" href="classlimelight_1_1Limelight.html#aa72e551670a1abc1a2f2093c79842efe" title="Publishes a pipeline configuration override to this camera.">SetPipelineConfigurationOverride(const
 PipelineConfiguration&amp;)</a>. </p><div class="fragment"><div class="line"><span class="comment">// RobotInit</span></div>
-<div class="line"><span class="keyword">auto</span> aiming =</div>
-<div class="line"><a class="code hl_function" href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html#a5abef614c6ac36ccbb6304ed3638d588">limelight::Limelight::PipelineConfiguration::FromDeployFolder</a>(<span class="stringliteral">&quot;aiming&quot;</span>);</div>
-<div class="line"><span class="keyword">auto</span> intake =</div>
-<div class="line"><a class="code hl_function" href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html#a5abef614c6ac36ccbb6304ed3638d588">limelight::Limelight::PipelineConfiguration::FromDeployFolder</a>(<span class="stringliteral">&quot;intake&quot;</span>);</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_class" href="classlimelight_1_1Limelight.html">limelight::Limelight</a>;</div>
+<div class="line"><span class="keyword">auto</span> aiming = <a class="code hl_function" href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html#a5abef614c6ac36ccbb6304ed3638d588">Limelight::PipelineConfiguration::FromDeployFolder</a>(<span class="stringliteral">&quot;aiming&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> intake = <a class="code hl_function" href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html#a5abef614c6ac36ccbb6304ed3638d588">Limelight::PipelineConfiguration::FromDeployFolder</a>(<span class="stringliteral">&quot;intake&quot;</span>);</div>
 <div class="line"><span class="comment">// mid-match</span></div>
 <div class="line">camera.SetPipelineConfigurationOverride(aiming);</div>
-<div class="ttc" id="aclasslimelight_1_1Limelight_1_1PipelineConfiguration_html_a5abef614c6ac36ccbb6304ed3638d588"><div class="ttname"><a href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html#a5abef614c6ac36ccbb6304ed3638d588">limelight::Limelight::PipelineConfiguration::FromDeployFolder</a></div><div class="ttdeci">static PipelineConfiguration FromDeployFolder(std::string_view deployRelativePath)</div><div class="ttdoc">Reads a .vpr pipeline file from the deploy directory of the robot program (src/main/deploy in the rob...</div><div class="ttdef"><b>Definition</b> Limelight.h:3345</div></div>
+<div class="ttc" id="aclasslimelight_1_1Limelight_1_1PipelineConfiguration_html_a5abef614c6ac36ccbb6304ed3638d588"><div class="ttname"><a href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html#a5abef614c6ac36ccbb6304ed3638d588">limelight::Limelight::PipelineConfiguration::FromDeployFolder</a></div><div class="ttdeci">static PipelineConfiguration FromDeployFolder(std::string_view deployRelativePath)</div><div class="ttdoc">Reads a .vpr pipeline file from the deploy directory of the robot program (src/main/deploy in the rob...</div><div class="ttdef"><b>Definition</b> Limelight.h:3348</div></div>
+<div class="ttc" id="aclasslimelight_1_1Limelight_html"><div class="ttname"><a href="classlimelight_1_1Limelight.html">limelight::Limelight</a></div><div class="ttdef"><b>Definition</b> Limelight.h:2607</div></div>
 </div><!-- fragment --><p>A failed load produces an instance where <a class="el" href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html#a6176c37203703686b4a9bf14c0544fa5">IsValid()</a> is false. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a153979da43036c7539ded4672a6f7d1e" name="a153979da43036c7539ded4672a6f7d1e"></a>

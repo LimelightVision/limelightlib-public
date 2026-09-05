@@ -1,12 +1,13 @@
-// LimelightLib v2.0.0. Requires Limelight OS 2027.0 or later.
-
-// Copy this file to src/main/java/first/Limelight.java.
+// Copyright (c) 2026 Limelight Vision. All rights reserved.
+// Open Source Software; you can modify and/or share it under the terms of
+// the MIT license file in the root directory of this project.
 
 package first;
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import org.wpilib.driverstation.DriverStationErrors;
 import org.wpilib.math.geometry.Pose2d;
 import org.wpilib.math.geometry.Pose3d;
 import org.wpilib.math.geometry.Rotation2d;
@@ -30,6 +31,7 @@ import org.wpilib.networktables.StringPublisher;
 import org.wpilib.networktables.StructArrayPublisher;
 import org.wpilib.networktables.TimestampedRaw;
 import org.wpilib.system.Filesystem;
+import org.wpilib.util.UsageReporting;
 
 /**
  * Interface to one Limelight camera or Systemcore vision instance.
@@ -359,6 +361,7 @@ public class Limelight implements AutoCloseable {
       name = "limelight";
     }
     this.name = name;
+    UsageReporting.reportUsage("Limelight", name);
     this.latestResults.fromLiveSubscriber = true;
     this.table = NetworkTableInstance.getDefault().getTable(name);
     this.telemetryTable = NetworkTableInstance.getDefault().getTable(TELEMETRY_TABLE + "/" + name);
@@ -573,7 +576,7 @@ public class Limelight implements AutoCloseable {
     long version = protocolVersionSubscriber.get();
     if (version > SUPPORTED_PROTOCOL_VERSION && !protocolWarningPrinted) {
       protocolWarningPrinted = true;
-      System.err.println(
+      reportWarning(
           "Limelight - "
               + name
               + ": camera protocol version "
@@ -1348,12 +1351,12 @@ public class Limelight implements AutoCloseable {
      */
     public static PipelineConfiguration fromString(String contents) {
       if (contents == null || contents.isEmpty()) {
-        System.out.println("Limelight - pipeline configuration rejected: no contents");
+        reportWarning("Limelight - pipeline configuration rejected: no contents");
         return new PipelineConfiguration(null, LoadStatus.NO_CONTENTS);
       }
       if (contents.getBytes(StandardCharsets.UTF_8).length
           > MAX_PIPELINE_CONFIGURATION_OVERRIDE_BYTES) {
-        System.out.println(
+        reportWarning(
             "Limelight - pipeline configuration rejected: larger than "
                 + MAX_PIPELINE_CONFIGURATION_OVERRIDE_BYTES
                 + " bytes");
@@ -1373,7 +1376,7 @@ public class Limelight implements AutoCloseable {
      */
     public static PipelineConfiguration fromDeployFolder(String deployRelativePath) {
       if (deployRelativePath == null || deployRelativePath.isEmpty()) {
-        System.out.println("Limelight - no pipeline configuration file name given");
+        reportWarning("Limelight - no pipeline configuration file name given");
         return new PipelineConfiguration(null, LoadStatus.NO_CONTENTS);
       }
       String contents =
@@ -1437,7 +1440,7 @@ public class Limelight implements AutoCloseable {
    */
   public void setPipelineConfigurationOverride(PipelineConfiguration config) {
     if (config == null || !config.isValid()) {
-      System.out.println("Limelight - ignoring invalid pipeline configuration override");
+      reportWarning("Limelight - ignoring invalid pipeline configuration override");
       return;
     }
     table.getEntry("codepipeline_set").setString(config.contents);
@@ -1537,11 +1540,11 @@ public class Limelight implements AutoCloseable {
      */
     public static FieldMap fromString(String contents) {
       if (contents == null || contents.isEmpty()) {
-        System.out.println("Limelight - field map rejected: no contents");
+        reportWarning("Limelight - field map rejected: no contents");
         return new FieldMap(null, LoadStatus.NO_CONTENTS);
       }
       if (contents.getBytes(StandardCharsets.UTF_8).length > MAX_SHARED_MAP_BYTES) {
-        System.out.println(
+        reportWarning(
             "Limelight - field map rejected: larger than " + MAX_SHARED_MAP_BYTES + " bytes");
         return new FieldMap(null, LoadStatus.TOO_LARGE);
       }
@@ -1559,7 +1562,7 @@ public class Limelight implements AutoCloseable {
      */
     public static FieldMap fromDeployFolder(String deployRelativePath) {
       if (deployRelativePath == null || deployRelativePath.isEmpty()) {
-        System.out.println("Limelight - no field map file name given");
+        reportWarning("Limelight - no field map file name given");
         return new FieldMap(null, LoadStatus.NO_CONTENTS);
       }
       String contents =
@@ -1609,7 +1612,7 @@ public class Limelight implements AutoCloseable {
    */
   public static void setSharedMap(FieldMap fieldMap) {
     if (fieldMap == null || !fieldMap.isValid()) {
-      System.out.println("Limelight - ignoring invalid shared field map");
+      reportWarning("Limelight - ignoring invalid shared field map");
       return;
     }
     NetworkTableInstance.getDefault()
@@ -1640,13 +1643,13 @@ public class Limelight implements AutoCloseable {
     try {
       Path relative = Path.of(name);
       if (relative.isAbsolute()) {
-        System.out.println(
+        reportWarning(
             "Limelight - " + what + " path must be relative to the deploy directory: " + name);
         return null;
       }
       return Filesystem.getDeployDirectory().toPath().resolve(relative);
     } catch (Exception e) {
-      System.out.println("Limelight - could not resolve the deploy directory: " + e);
+      reportWarning("Limelight - could not resolve the deploy directory: " + e);
       return null;
     }
   }
@@ -1659,7 +1662,7 @@ public class Limelight implements AutoCloseable {
     try {
       return Files.readString(path, StandardCharsets.UTF_8);
     } catch (Exception e) {
-      System.out.println("Limelight - could not read " + what + " file " + path + ": " + e);
+      reportWarning("Limelight - could not read " + what + " file " + path + ": " + e);
       return null;
     }
   }
@@ -2152,6 +2155,11 @@ public class Limelight implements AutoCloseable {
     table
         .getEntry("capture_rewind")
         .setDoubleArray(new double[] {counter + 1, clampArg(durationSeconds, 1, 165)});
+  }
+
+  // Loader and protocol warnings go to the Driver Station console like other WPILib warnings.
+  private static void reportWarning(String message) {
+    DriverStationErrors.reportWarning(message, false);
   }
 
   /**
@@ -4106,9 +4114,9 @@ public class Limelight implements AutoCloseable {
   // ---- MessagePack decoder ----
 
   /**
-   * Minimal, allocation-light MessagePack reader covering the full msgpack spec as produced by the
-   * camera (nil, bool, all int/uint widths, float32/64, str, bin, array, map, with skippable ext
-   * types). Nil is read leniently as 0 / "" / empty so absent optional data never throws.
+   * Minimal, allocation-light MessagePack reader covering the full msgpack spec (nil, bool, all
+   * int/uint widths, float32/64, str, bin, array, map, with skippable ext types). Nil is read
+   * leniently as 0 / "" / empty so absent optional data never throws.
    */
   private static final class MsgPackReader {
     private static final int MAX_SKIP_DEPTH = 64;
