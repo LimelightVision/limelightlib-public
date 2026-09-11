@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta8-alpha7</span>
+   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta9-alpha7</span>
    </div>
    <div id="projectbrief">Limelight interface for WPILib C++ projects</div>
   </td>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('classlimelight_1_1PoseEstimate.html','
 <p>A robot pose estimate with the metadata needed for pose-estimator fusion.  
  <a href="classlimelight_1_1PoseEstimate.html#details">More...</a></p>
 
-<p><code>#include &lt;Limelight.h&gt;</code></p>
+<p><code>#include &lt;PoseEstimate.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -118,24 +118,24 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a74c101b488ecb85402a1c6492b7fdc22" id="r_a74c101b488ecb85402a1c6492b7fdc22"><td class="memItemLeft" align="right" valign="top">wpi::math::Pose2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a74c101b488ecb85402a1c6492b7fdc22">pose</a></td></tr>
 <tr class="separator:a74c101b488ecb85402a1c6492b7fdc22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a612b9d2d28946db6918146e17c405556" id="r_a612b9d2d28946db6918146e17c405556"><td class="memItemLeft" align="right" valign="top">wpi::units::second_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a612b9d2d28946db6918146e17c405556">timestampSeconds</a> {0.0}</td></tr>
-<tr class="memdesc:a612b9d2d28946db6918146e17c405556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Latency-compensated capture timestamp in the local NetworkTables timebase.  <br /></td></tr>
-<tr class="separator:a612b9d2d28946db6918146e17c405556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a454c00329d1af0b5e15bf3b997bac2e5" id="r_a454c00329d1af0b5e15bf3b997bac2e5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a454c00329d1af0b5e15bf3b997bac2e5">latencyMillis</a> = 0</td></tr>
-<tr class="memdesc:a454c00329d1af0b5e15bf3b997bac2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total latency (capture + targeting) in milliseconds.  <br /></td></tr>
-<tr class="separator:a454c00329d1af0b5e15bf3b997bac2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61634478c6720b74447e02c133d66590" id="r_a61634478c6720b74447e02c133d66590"><td class="memItemLeft" align="right" valign="top">wpi::units::second_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a61634478c6720b74447e02c133d66590">timestamp</a> {0.0}</td></tr>
+<tr class="memdesc:a61634478c6720b74447e02c133d66590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Latency-compensated capture timestamp in the local NetworkTables timebase.  <br /></td></tr>
+<tr class="separator:a61634478c6720b74447e02c133d66590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd2f24b8737b13b043bc0eee4e93d61" id="r_a0cd2f24b8737b13b043bc0eee4e93d61"><td class="memItemLeft" align="right" valign="top">wpi::units::millisecond_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a0cd2f24b8737b13b043bc0eee4e93d61">latency</a> {0.0}</td></tr>
+<tr class="memdesc:a0cd2f24b8737b13b043bc0eee4e93d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total latency (capture + targeting) in milliseconds.  <br /></td></tr>
+<tr class="separator:a0cd2f24b8737b13b043bc0eee4e93d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dac44f0361d44d504d58b3ce18998ab" id="r_a8dac44f0361d44d504d58b3ce18998ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a8dac44f0361d44d504d58b3ce18998ab">reportedTagCount</a> = 0</td></tr>
 <tr class="memdesc:a8dac44f0361d44d504d58b3ce18998ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera-reported botpose tag count, telemetry only.  <br /></td></tr>
 <tr class="separator:a8dac44f0361d44d504d58b3ce18998ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a477c0c5168af94b774988be38eca07cf" id="r_a477c0c5168af94b774988be38eca07cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a477c0c5168af94b774988be38eca07cf">fieldedTagCount</a> = 0</td></tr>
 <tr class="memdesc:a477c0c5168af94b774988be38eca07cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of fielded tags.  <br /></td></tr>
 <tr class="separator:a477c0c5168af94b774988be38eca07cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ed3ccc9452424d2be10a93555c56b8" id="r_ae2ed3ccc9452424d2be10a93555c56b8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#ae2ed3ccc9452424d2be10a93555c56b8">tagSpanMeters</a> = 0</td></tr>
-<tr class="memdesc:ae2ed3ccc9452424d2be10a93555c56b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max distance between contributing tags in meters.  <br /></td></tr>
-<tr class="separator:ae2ed3ccc9452424d2be10a93555c56b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac01fa999aadb2347ecf51e740ddcf330" id="r_ac01fa999aadb2347ecf51e740ddcf330"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#ac01fa999aadb2347ecf51e740ddcf330">avgTagDistanceMeters</a> = 0</td></tr>
-<tr class="memdesc:ac01fa999aadb2347ecf51e740ddcf330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average distance to contributing tags in meters.  <br /></td></tr>
-<tr class="separator:ac01fa999aadb2347ecf51e740ddcf330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0dc270cb3a6a17fd6cc28ac7775274" id="r_a7e0dc270cb3a6a17fd6cc28ac7775274"><td class="memItemLeft" align="right" valign="top">wpi::units::meter_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a7e0dc270cb3a6a17fd6cc28ac7775274">tagSpan</a> {0.0}</td></tr>
+<tr class="memdesc:a7e0dc270cb3a6a17fd6cc28ac7775274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max distance between contributing tags in meters.  <br /></td></tr>
+<tr class="separator:a7e0dc270cb3a6a17fd6cc28ac7775274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fafaa78e769aa157b528744821b579f" id="r_a0fafaa78e769aa157b528744821b579f"><td class="memItemLeft" align="right" valign="top">wpi::units::meter_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#a0fafaa78e769aa157b528744821b579f">avgTagDistance</a> {0.0}</td></tr>
+<tr class="memdesc:a0fafaa78e769aa157b528744821b579f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average distance to contributing tags in meters.  <br /></td></tr>
+<tr class="separator:a0fafaa78e769aa157b528744821b579f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd6e8ab27fcfff9ca873ffa7f3b06735" id="r_acd6e8ab27fcfff9ca873ffa7f3b06735"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html#acd6e8ab27fcfff9ca873ffa7f3b06735">avgTagAreaPercent</a> = 0</td></tr>
 <tr class="memdesc:acd6e8ab27fcfff9ca873ffa7f3b06735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average area of contributing tags (percentage of image)  <br /></td></tr>
 <tr class="separator:acd6e8ab27fcfff9ca873ffa7f3b06735"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -279,14 +279,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a612b9d2d28946db6918146e17c405556" name="a612b9d2d28946db6918146e17c405556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a612b9d2d28946db6918146e17c405556">&#9670;&#160;</a></span>timestampSeconds</h2>
+<a id="a61634478c6720b74447e02c133d66590" name="a61634478c6720b74447e02c133d66590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61634478c6720b74447e02c133d66590">&#9670;&#160;</a></span>timestamp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">wpi::units::second_t limelight::PoseEstimate::timestampSeconds {0.0}</td>
+          <td class="memname">wpi::units::second_t limelight::PoseEstimate::timestamp {0.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -296,14 +296,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a454c00329d1af0b5e15bf3b997bac2e5" name="a454c00329d1af0b5e15bf3b997bac2e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a454c00329d1af0b5e15bf3b997bac2e5">&#9670;&#160;</a></span>latencyMillis</h2>
+<a id="a0cd2f24b8737b13b043bc0eee4e93d61" name="a0cd2f24b8737b13b043bc0eee4e93d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd2f24b8737b13b043bc0eee4e93d61">&#9670;&#160;</a></span>latency</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double limelight::PoseEstimate::latencyMillis = 0</td>
+          <td class="memname">wpi::units::millisecond_t limelight::PoseEstimate::latency {0.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -345,14 +345,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae2ed3ccc9452424d2be10a93555c56b8" name="ae2ed3ccc9452424d2be10a93555c56b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2ed3ccc9452424d2be10a93555c56b8">&#9670;&#160;</a></span>tagSpanMeters</h2>
+<a id="a7e0dc270cb3a6a17fd6cc28ac7775274" name="a7e0dc270cb3a6a17fd6cc28ac7775274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0dc270cb3a6a17fd6cc28ac7775274">&#9670;&#160;</a></span>tagSpan</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double limelight::PoseEstimate::tagSpanMeters = 0</td>
+          <td class="memname">wpi::units::meter_t limelight::PoseEstimate::tagSpan {0.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -361,14 +361,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac01fa999aadb2347ecf51e740ddcf330" name="ac01fa999aadb2347ecf51e740ddcf330"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac01fa999aadb2347ecf51e740ddcf330">&#9670;&#160;</a></span>avgTagDistanceMeters</h2>
+<a id="a0fafaa78e769aa157b528744821b579f" name="a0fafaa78e769aa157b528744821b579f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fafaa78e769aa157b528744821b579f">&#9670;&#160;</a></span>avgTagDistance</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double limelight::PoseEstimate::avgTagDistanceMeters = 0</td>
+          <td class="memname">wpi::units::meter_t limelight::PoseEstimate::avgTagDistance {0.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -407,7 +407,7 @@ Public Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">{<a class="code hl_variable" href="classlimelight_1_1PoseEstimateConfig.html#aaf8f5a702fe019f353bdd3eef1baa904">PoseEstimateConfig::UNTRUSTED</a>,</div>
 <div class="line">                                      <a class="code hl_variable" href="classlimelight_1_1PoseEstimateConfig.html#aaf8f5a702fe019f353bdd3eef1baa904">PoseEstimateConfig::UNTRUSTED</a>,</div>
 <div class="line">                                      <a class="code hl_variable" href="classlimelight_1_1PoseEstimateConfig.html#aaf8f5a702fe019f353bdd3eef1baa904">PoseEstimateConfig::UNTRUSTED</a>}</div>
-<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_aaf8f5a702fe019f353bdd3eef1baa904"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#aaf8f5a702fe019f353bdd3eef1baa904">limelight::PoseEstimateConfig::UNTRUSTED</a></div><div class="ttdeci">static constexpr double UNTRUSTED</div><div class="ttdoc">A standard deviation so large that a pose estimator ignores the measurement.</div><div class="ttdef"><b>Definition</b> Limelight.h:893</div></div>
+<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_aaf8f5a702fe019f353bdd3eef1baa904"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#aaf8f5a702fe019f353bdd3eef1baa904">limelight::PoseEstimateConfig::UNTRUSTED</a></div><div class="ttdeci">static constexpr double UNTRUSTED</div><div class="ttdoc">A standard deviation so large that a pose estimator ignores the measurement.</div><div class="ttdef"><b>Definition</b> PoseEstimateConfig.h:91</div></div>
 </div><!-- fragment -->
 <p>Fusion-ready standard deviations [x meters, y meters, theta radians]. </p>
 <p>The <a class="el" href="classlimelight_1_1PoseEstimateConfig.html" title="A reusable configuration object for rejection filters and standard deviation scaling.">PoseEstimateConfig</a> of this camera computes them from tag distance and tag count. Pass this value as the third argument to AddVisionMeasurement. </p>
@@ -498,7 +498,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="Limelight_8h.html">Limelight.h</a></li>
+<li><a class="el" href="PoseEstimate_8h.html">PoseEstimate.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

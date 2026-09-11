@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['family_0',['family',['../structlimelight_1_1FiducialTarget.html#ab7c84d905cead833664266b4ab6f7b9e',1,'limelight::FiducialTarget::family'],['../structlimelight_1_1BarcodeTarget.html#a0d8b3524bb7c1ca3b9ebc1b951f8b9b8',1,'limelight::BarcodeTarget::family']]],
+  ['family_0',['family',['../structlimelight_1_1BarcodeTarget.html#a0d8b3524bb7c1ca3b9ebc1b951f8b9b8',1,'limelight::BarcodeTarget::family'],['../structlimelight_1_1FiducialTarget.html#ab7c84d905cead833664266b4ab6f7b9e',1,'limelight::FiducialTarget::family']]],
   ['fiducialid_1',['fiducialId',['../structlimelight_1_1FiducialTarget.html#a7e5e16887188943d02fa507edc1a3052',1,'limelight::FiducialTarget']]],
   ['fiducialtargets_2',['fiducialTargets',['../classlimelight_1_1LimelightResults.html#afbfa9dc547d69934efa00c3f989f6fa9',1,'limelight::LimelightResults']]],
   ['fielded_3',['fielded',['../structlimelight_1_1FiducialTarget.html#afbf16c2a0d8914c29916cad2b58d0cff',1,'limelight::FiducialTarget']]],

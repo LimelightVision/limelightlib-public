@@ -3,7 +3,7 @@ var hierarchy =
     [ "limelight::CameraIntrinsics", "structlimelight_1_1CameraIntrinsics.html", null ],
     [ "limelight::ClassifierTarget", "structlimelight_1_1ClassifierTarget.html", null ],
     [ "limelight::CounterTarget", "structlimelight_1_1CounterTarget.html", null ],
-    [ "limelight::Limelight::FieldMap", "classlimelight_1_1Limelight_1_1FieldMap.html", null ],
+    [ "limelight::FieldMap", "classlimelight_1_1FieldMap.html", null ],
     [ "limelight::HardwareData", "structlimelight_1_1HardwareData.html", null ],
     [ "limelight::IMUData", "structlimelight_1_1IMUData.html", null ],
     [ "limelight::Limelight", "classlimelight_1_1Limelight.html", null ],
@@ -15,7 +15,7 @@ var hierarchy =
       [ "limelight::RetroTarget", "structlimelight_1_1RetroTarget.html", null ]
     ] ],
     [ "limelight::OCRTarget", "structlimelight_1_1OCRTarget.html", null ],
-    [ "limelight::Limelight::PipelineConfiguration", "classlimelight_1_1Limelight_1_1PipelineConfiguration.html", null ],
+    [ "limelight::PipelineConfiguration", "classlimelight_1_1PipelineConfiguration.html", null ],
     [ "limelight::PoseEstimate", "classlimelight_1_1PoseEstimate.html", null ],
     [ "limelight::PoseEstimateConfig", "classlimelight_1_1PoseEstimateConfig.html", null ],
     [ "limelight::RewindData", "structlimelight_1_1RewindData.html", null ],

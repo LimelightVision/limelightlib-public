@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['latencymillis_0',['latencyMillis',['../classlimelight_1_1PoseEstimate.html#a454c00329d1af0b5e15bf3b997bac2e5',1,'limelight::PoseEstimate']]],
-  ['latencypenaltymicros_1',['latencyPenaltyMicros',['../structlimelight_1_1RewindData.html#aa78a7b8877e5a19ecaf200957ec686f6',1,'limelight::RewindData']]]
+  ['latency_0',['latency',['../classlimelight_1_1PoseEstimate.html#a0cd2f24b8737b13b043bc0eee4e93d61',1,'limelight::PoseEstimate']]],
+  ['latencypenalty_1',['latencyPenalty',['../structlimelight_1_1RewindData.html#ae76daa6563da2cd1b782e4d2b11d8544',1,'limelight::RewindData']]]
 ];

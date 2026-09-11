@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta8-alpha7</span>
+   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta9-alpha7</span>
    </div>
    <div id="projectbrief">Limelight interface for WPILib C++ projects</div>
   </td>
@@ -105,7 +105,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A barcode/QR code target.  <a href="structlimelight_1_1BarcodeTarget.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1CameraIntrinsics.html">CameraIntrinsics</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Live camera intrinsics for the running pipeline.  <a href="structlimelight_1_1CameraIntrinsics.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The active camera intrinsics, scaled to the current processing resolution.  <a href="structlimelight_1_1CameraIntrinsics.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1ClassifierTarget.html">ClassifierTarget</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A neural classifier result.  <a href="structlimelight_1_1ClassifierTarget.html#details">More...</a><br /></td></tr>
@@ -118,6 +118,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1FiducialTarget.html">FiducialTarget</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An AprilTag/fiducial target.  <a href="structlimelight_1_1FiducialTarget.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1FieldMap.html">FieldMap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable, validated shared field map.  <a href="classlimelight_1_1FieldMap.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1HardwareData.html">HardwareData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera hardware and system stats.  <a href="structlimelight_1_1HardwareData.html#details">More...</a><br /></td></tr>
@@ -135,6 +138,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1OCRTarget.html">OCRTarget</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An OCR (text recognition) result.  <a href="structlimelight_1_1OCRTarget.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PipelineConfiguration.html">PipelineConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable, validated pipeline configuration override.  <a href="classlimelight_1_1PipelineConfiguration.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimate.html">PoseEstimate</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A robot pose estimate with the metadata needed for pose-estimator fusion.  <a href="classlimelight_1_1PoseEstimate.html#details">More...</a><br /></td></tr>
@@ -154,46 +160,18 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a99f4514031e5c156442101bc5be5688b" id="r_a99f4514031e5c156442101bc5be5688b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688b">Status</a> { <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688bae0aa021e21dddbd6d8cecec71e9cf564">OK</a>
-, <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688baee69335f36c559202930f685b01c009e">NO_DATA</a>
-, <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688ba4d855a061b3066dc14a3b12ed26b5456">STALE</a>
-, <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688bae0b52f1984ce67b81d11ae5698bf39c3">DECODE_ERROR</a>
- }</td></tr>
-<tr class="memdesc:a99f4514031e5c156442101bc5be5688b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Health of a camera.  <a href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688b">More...</a><br /></td></tr>
-<tr class="separator:a99f4514031e5c156442101bc5be5688b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81bd7999a2e707e38898a925114053ea" id="r_a81bd7999a2e707e38898a925114053ea"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">PipelineConfigurationOverrideState</a> { <br />
-&#160;&#160;<a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa88559a0cfd8250c9d65970cc145c92d4">OFF</a>
-, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa18ff74f43da410c5529f7d6fca84f115">ACTIVE</a>
-, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa273cc667bc4131ab10a1ecb2000fadea">FORCED_OFF</a>
-, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaabafc55dde8d86565d8263c1038b70cfc">NO_STRING</a>
+<tr class="memitem:a6186f01ca1ee794b48b2d14506c1e777" id="r_a6186f01ca1ee794b48b2d14506c1e777"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777">DownscaleOverride</a> { <br />
+&#160;&#160;<a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a90f1ef9fb42d6a97265864919da25286">PIPELINE_CONTROL</a> = 0
+, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777abb7f5ae6220c9828e5ec91faf054197c">X1</a> = 1
+, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777acfd9d27f728a0a676a477d5280a38e63">X1_5</a> = 2
+, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a54105bddbfe3f639d49cbe8f5182c958">X2</a> = 3
 , <br />
-&#160;&#160;<a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa551530ec1af53eaa77c1bde0ca457b4b">PARSE_ERROR</a>
-, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a>
+&#160;&#160;<a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a0541026d4fa57ca1cc1a6fe30f57fea1">X3</a> = 4
+, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a7d71ed2af4cc5c6a8380324d9bc4a45f">X4</a> = 5
 <br />
  }</td></tr>
-<tr class="memdesc:a81bd7999a2e707e38898a925114053ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pipeline configuration override state reported by the camera.  <a href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">More...</a><br /></td></tr>
-<tr class="separator:a81bd7999a2e707e38898a925114053ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4c113a006e408016a3beed0467b6a4" id="r_add4c113a006e408016a3beed0467b6a4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">SharedMapState</a> { <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a88559a0cfd8250c9d65970cc145c92d4">OFF</a>
-, <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a18ff74f43da410c5529f7d6fca84f115">ACTIVE</a>
-, <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a551530ec1af53eaa77c1bde0ca457b4b">PARSE_ERROR</a>
-, <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a>
- }</td></tr>
-<tr class="memdesc:add4c113a006e408016a3beed0467b6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared field map state reported by the camera.  <a href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">More...</a><br /></td></tr>
-<tr class="separator:add4c113a006e408016a3beed0467b6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2569f2d25f404656f5db5f90ce788d9e" id="r_a2569f2d25f404656f5db5f90ce788d9e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9e">LoadStatus</a> { <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9eae0aa021e21dddbd6d8cecec71e9cf564">OK</a>
-, <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9ea8e223fab53a3fcb8e2767b8d03957026">NO_CONTENTS</a>
-, <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9ea82fbe87835b941addda10c26ff6e98d6">READ_FAILED</a>
-, <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9ea5a28a0d6dc6d88bf608c575966a85809">TOO_LARGE</a>
- }</td></tr>
-<tr class="memdesc:a2569f2d25f404656f5db5f90ce788d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of loading a Limelight::PipelineConfiguration or Limelight::FieldMap.  <a href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9e">More...</a><br /></td></tr>
-<tr class="separator:a2569f2d25f404656f5db5f90ce788d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a255aff3b61615749d53ad8349a797328" id="r_a255aff3b61615749d53ad8349a797328"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328">PoseEstimateType</a> { <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328aa1902b37417ff417cfe360fa4baaad9b">MT1_WPIBLUE</a>
-, <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328aa04d87fb41681586e7957f9e49699526">MT1_WPIRED</a>
-, <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328a949e6cd1fd7398ffcc1f9e0d5c4ceb93">MT2_WPIBLUE</a>
-, <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328a94086a798da68470b454e5966ceed1f8">MT2_WPIRED</a>
- }</td></tr>
-<tr class="memdesc:a255aff3b61615749d53ad8349a797328"><td class="mdescLeft">&#160;</td><td class="mdescRight">The robot pose estimate outputs.  <a href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328">More...</a><br /></td></tr>
-<tr class="separator:a255aff3b61615749d53ad8349a797328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a6186f01ca1ee794b48b2d14506c1e777"><td class="mdescLeft">&#160;</td><td class="mdescRight">AprilTag detector downscaling factors.  <a href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777">More...</a><br /></td></tr>
+<tr class="separator:a6186f01ca1ee794b48b2d14506c1e777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a455b1b33a8e4588648a5c371331464aa" id="r_a455b1b33a8e4588648a5c371331464aa"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a455b1b33a8e4588648a5c371331464aa">IMUMode</a> { <br />
 &#160;&#160;<a class="el" href="namespacelimelight.html#a455b1b33a8e4588648a5c371331464aaa3932d629fb5e2be9d09b3a4485b3cc9d">EXTERNAL</a> = 0
 , <a class="el" href="namespacelimelight.html#a455b1b33a8e4588648a5c371331464aaa2135eb1fa39d0654587bbe80db2373b3">EXTERNAL_SEED_INTERNAL</a> = 1
@@ -213,18 +191,46 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ad12bbb9877a7f5c12d3b884d9694a8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED behavior modes.  <a href="namespacelimelight.html#ad12bbb9877a7f5c12d3b884d9694a8c9">More...</a><br /></td></tr>
 <tr class="separator:ad12bbb9877a7f5c12d3b884d9694a8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6186f01ca1ee794b48b2d14506c1e777" id="r_a6186f01ca1ee794b48b2d14506c1e777"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777">DownscaleOverride</a> { <br />
-&#160;&#160;<a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a90f1ef9fb42d6a97265864919da25286">PIPELINE_CONTROL</a> = 0
-, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777abb7f5ae6220c9828e5ec91faf054197c">X1</a> = 1
-, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777acfd9d27f728a0a676a477d5280a38e63">X1_5</a> = 2
-, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a54105bddbfe3f639d49cbe8f5182c958">X2</a> = 3
+<tr class="memitem:a2569f2d25f404656f5db5f90ce788d9e" id="r_a2569f2d25f404656f5db5f90ce788d9e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9e">LoadStatus</a> { <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9eae0aa021e21dddbd6d8cecec71e9cf564">OK</a>
+, <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9ea8e223fab53a3fcb8e2767b8d03957026">NO_CONTENTS</a>
+, <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9ea82fbe87835b941addda10c26ff6e98d6">READ_FAILED</a>
+, <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9ea5a28a0d6dc6d88bf608c575966a85809">TOO_LARGE</a>
+ }</td></tr>
+<tr class="memdesc:a2569f2d25f404656f5db5f90ce788d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of loading a Limelight::PipelineConfiguration or Limelight::FieldMap.  <a href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9e">More...</a><br /></td></tr>
+<tr class="separator:a2569f2d25f404656f5db5f90ce788d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81bd7999a2e707e38898a925114053ea" id="r_a81bd7999a2e707e38898a925114053ea"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">PipelineConfigurationOverrideState</a> { <br />
+&#160;&#160;<a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa88559a0cfd8250c9d65970cc145c92d4">OFF</a>
+, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa18ff74f43da410c5529f7d6fca84f115">ACTIVE</a>
+, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa273cc667bc4131ab10a1ecb2000fadea">FORCED_OFF</a>
+, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaabafc55dde8d86565d8263c1038b70cfc">NO_STRING</a>
 , <br />
-&#160;&#160;<a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a0541026d4fa57ca1cc1a6fe30f57fea1">X3</a> = 4
-, <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a7d71ed2af4cc5c6a8380324d9bc4a45f">X4</a> = 5
+&#160;&#160;<a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa551530ec1af53eaa77c1bde0ca457b4b">PARSE_ERROR</a>
+, <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053eaa696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a6186f01ca1ee794b48b2d14506c1e777"><td class="mdescLeft">&#160;</td><td class="mdescRight">AprilTag detector downscaling factors.  <a href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777">More...</a><br /></td></tr>
-<tr class="separator:a6186f01ca1ee794b48b2d14506c1e777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a81bd7999a2e707e38898a925114053ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pipeline configuration override state reported by the camera.  <a href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">More...</a><br /></td></tr>
+<tr class="separator:a81bd7999a2e707e38898a925114053ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255aff3b61615749d53ad8349a797328" id="r_a255aff3b61615749d53ad8349a797328"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328">PoseEstimateType</a> { <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328aa1902b37417ff417cfe360fa4baaad9b">MT1_WPIBLUE</a>
+, <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328aa04d87fb41681586e7957f9e49699526">MT1_WPIRED</a>
+, <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328a949e6cd1fd7398ffcc1f9e0d5c4ceb93">MT2_WPIBLUE</a>
+, <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328a94086a798da68470b454e5966ceed1f8">MT2_WPIRED</a>
+ }</td></tr>
+<tr class="memdesc:a255aff3b61615749d53ad8349a797328"><td class="mdescLeft">&#160;</td><td class="mdescRight">The robot pose estimate outputs.  <a href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328">More...</a><br /></td></tr>
+<tr class="separator:a255aff3b61615749d53ad8349a797328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add4c113a006e408016a3beed0467b6a4" id="r_add4c113a006e408016a3beed0467b6a4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">SharedMapState</a> { <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a88559a0cfd8250c9d65970cc145c92d4">OFF</a>
+, <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a18ff74f43da410c5529f7d6fca84f115">ACTIVE</a>
+, <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a551530ec1af53eaa77c1bde0ca457b4b">PARSE_ERROR</a>
+, <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a>
+ }</td></tr>
+<tr class="memdesc:add4c113a006e408016a3beed0467b6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared field map state reported by the camera.  <a href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">More...</a><br /></td></tr>
+<tr class="separator:add4c113a006e408016a3beed0467b6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f4514031e5c156442101bc5be5688b" id="r_a99f4514031e5c156442101bc5be5688b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688b">Status</a> { <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688bae0aa021e21dddbd6d8cecec71e9cf564">OK</a>
+, <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688baee69335f36c559202930f685b01c009e">NO_DATA</a>
+, <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688ba4d855a061b3066dc14a3b12ed26b5456">STALE</a>
+, <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688bae0b52f1984ce67b81d11ae5698bf39c3">DECODE_ERROR</a>
+ }</td></tr>
+<tr class="memdesc:a99f4514031e5c156442101bc5be5688b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Health of a camera.  <a href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688b">More...</a><br /></td></tr>
+<tr class="separator:a99f4514031e5c156442101bc5be5688b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -234,25 +240,24 @@ Functions</h2></td></tr>
 <tr class="memitem:ae805ecf0e2837bf6db2145f2299a2712" id="r_ae805ecf0e2837bf6db2145f2299a2712"><td class="memItemLeft" align="right" valign="top">wpi::math::Pose2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#ae805ecf0e2837bf6db2145f2299a2712">ToPose2D</a> (std::span&lt; const double &gt; inData)</td></tr>
 <tr class="memdesc:ae805ecf0e2837bf6db2145f2299a2712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a pose array to a Pose2d.  <br /></td></tr>
 <tr class="separator:ae805ecf0e2837bf6db2145f2299a2712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58ec1365f15f5b9e339ce152f6867995" id="r_a58ec1365f15f5b9e339ce152f6867995"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">PipelineConfigurationOverrideState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a58ec1365f15f5b9e339ce152f6867995">ParsePipelineConfigurationOverrideState</a> (std::string_view s)</td></tr>
-<tr class="separator:a58ec1365f15f5b9e339ce152f6867995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49dc0b331fb9c0872da0a24f1a1387d3" id="r_a49dc0b331fb9c0872da0a24f1a1387d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">SharedMapState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a49dc0b331fb9c0872da0a24f1a1387d3">ParseSharedMapState</a> (std::string_view s)</td></tr>
-<tr class="separator:a49dc0b331fb9c0872da0a24f1a1387d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd39c7cbe6000b5ac3692fa89e3b51d" id="r_adfd39c7cbe6000b5ac3692fa89e3b51d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelimelight.html#a455b1b33a8e4588648a5c371331464aa">IMUMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#adfd39c7cbe6000b5ac3692fa89e3b51d">IMUModeFromNT</a> (int value)</td></tr>
 <tr class="separator:adfd39c7cbe6000b5ac3692fa89e3b51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a23cf560a925ac7c5db221961deb8eab0" id="r_a23cf560a925ac7c5db221961deb8eab0"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a23cf560a925ac7c5db221961deb8eab0">NT_TICKS_PER_SECOND</a> = 1.0e9</td></tr>
-<tr class="memdesc:a23cf560a925ac7c5db221961deb8eab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">NetworkTables timestamp ticks per second for the WPILib build this library targets.  <br /></td></tr>
-<tr class="separator:a23cf560a925ac7c5db221961deb8eab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41cd7705b03ad01f93dc4e9ff211c25a" id="r_a41cd7705b03ad01f93dc4e9ff211c25a"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a41cd7705b03ad01f93dc4e9ff211c25a">kPoseArrayLength</a> = 6</td></tr>
+<tr class="memdesc:a41cd7705b03ad01f93dc4e9ff211c25a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of every pose array: [x, y, z, roll, pitch, yaw].  <br /></td></tr>
+<tr class="separator:a41cd7705b03ad01f93dc4e9ff211c25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7280d82732fb53986a9a15be464614a" id="r_ab7280d82732fb53986a9a15be464614a"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#ab7280d82732fb53986a9a15be464614a">kPoseEstimateTypeCount</a> = 4</td></tr>
 <tr class="memdesc:ab7280d82732fb53986a9a15be464614a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of PoseEstimateType values.  <br /></td></tr>
 <tr class="separator:ab7280d82732fb53986a9a15be464614a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23cf560a925ac7c5db221961deb8eab0" id="r_a23cf560a925ac7c5db221961deb8eab0"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelimelight.html#a23cf560a925ac7c5db221961deb8eab0">NT_TICKS_PER_SECOND</a> = 1.0e9</td></tr>
+<tr class="memdesc:a23cf560a925ac7c5db221961deb8eab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">NetworkTables timestamp ticks per second for the WPILib build this library targets.  <br /></td></tr>
+<tr class="separator:a23cf560a925ac7c5db221961deb8eab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a99f4514031e5c156442101bc5be5688b" name="a99f4514031e5c156442101bc5be5688b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f4514031e5c156442101bc5be5688b">&#9670;&#160;</a></span>Status</h2>
+<a id="a6186f01ca1ee794b48b2d14506c1e777" name="a6186f01ca1ee794b48b2d14506c1e777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6186f01ca1ee794b48b2d14506c1e777">&#9670;&#160;</a></span>DownscaleOverride</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,7 +266,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688b">limelight::Status</a></td>
+          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777">limelight::DownscaleOverride</a></td>
         </tr>
       </table>
   </td>
@@ -271,160 +276,20 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Health of a camera. </p>
+<p>AprilTag detector downscaling factors. </p>
+<p>More downscaling improves performance. It can reduce the detection range. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688bae0aa021e21dddbd6d8cecec71e9cf564" name="a99f4514031e5c156442101bc5be5688bae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"><p>A decodable frame has been received recently. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a90f1ef9fb42d6a97265864919da25286" name="a6186f01ca1ee794b48b2d14506c1e777a90f1ef9fb42d6a97265864919da25286"></a>PIPELINE_CONTROL&#160;</td><td class="fielddoc"><p>Use the downscale configured in the current pipeline. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688baee69335f36c559202930f685b01c009e" name="a99f4514031e5c156442101bc5be5688baee69335f36c559202930f685b01c009e"></a>NO_DATA&#160;</td><td class="fielddoc"><p>The camera has not sent a results envelope. </p>
-<p>Possible causes: the camera is off, the name is wrong, or MsgPack output is disabled </p>
+<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777abb7f5ae6220c9828e5ec91faf054197c" name="a6186f01ca1ee794b48b2d14506c1e777abb7f5ae6220c9828e5ec91faf054197c"></a>X1&#160;</td><td class="fielddoc"><p>No downscaling. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688ba4d855a061b3066dc14a3b12ed26b5456" name="a99f4514031e5c156442101bc5be5688ba4d855a061b3066dc14a3b12ed26b5456"></a>STALE&#160;</td><td class="fielddoc"><p>The newest frame is older than the stale threshold. </p>
-<p>The camera is disconnected or has stopped </p>
+<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777acfd9d27f728a0a676a477d5280a38e63" name="a6186f01ca1ee794b48b2d14506c1e777acfd9d27f728a0a676a477d5280a38e63"></a>X1_5&#160;</td><td class="fielddoc"><p>1.5x downscale </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688bae0b52f1984ce67b81d11ae5698bf39c3" name="a99f4514031e5c156442101bc5be5688bae0b52f1984ce67b81d11ae5698bf39c3"></a>DECODE_ERROR&#160;</td><td class="fielddoc"><p>The newest frame did not decode. </p>
-<p>See <a class="el" href="classlimelight_1_1LimelightResults.html#a3edfb44db6df8188fed39c5e1bde0578" title="Non-empty if the envelope failed to decode.">LimelightResults::error</a> </p>
+<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a54105bddbfe3f639d49cbe8f5182c958" name="a6186f01ca1ee794b48b2d14506c1e777a54105bddbfe3f639d49cbe8f5182c958"></a>X2&#160;</td><td class="fielddoc"><p>2x downscale </p>
 </td></tr>
-</table>
-
-</div>
-</div>
-<a id="a81bd7999a2e707e38898a925114053ea" name="a81bd7999a2e707e38898a925114053ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81bd7999a2e707e38898a925114053ea">&#9670;&#160;</a></span>PipelineConfigurationOverrideState</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">limelight::PipelineConfigurationOverrideState</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pipeline configuration override state reported by the camera. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa88559a0cfd8250c9d65970cc145c92d4" name="a81bd7999a2e707e38898a925114053eaa88559a0cfd8250c9d65970cc145c92d4"></a>OFF&#160;</td><td class="fielddoc"><p>No override requested. </p>
+<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a0541026d4fa57ca1cc1a6fe30f57fea1" name="a6186f01ca1ee794b48b2d14506c1e777a0541026d4fa57ca1cc1a6fe30f57fea1"></a>X3&#160;</td><td class="fielddoc"><p>3x downscale </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa18ff74f43da410c5529f7d6fca84f115" name="a81bd7999a2e707e38898a925114053eaa18ff74f43da410c5529f7d6fca84f115"></a>ACTIVE&#160;</td><td class="fielddoc"><p>The override is applied. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa273cc667bc4131ab10a1ecb2000fadea" name="a81bd7999a2e707e38898a925114053eaa273cc667bc4131ab10a1ecb2000fadea"></a>FORCED_OFF&#160;</td><td class="fielddoc"><p>The camera web interface forced the override off. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaabafc55dde8d86565d8263c1038b70cfc" name="a81bd7999a2e707e38898a925114053eaabafc55dde8d86565d8263c1038b70cfc"></a>NO_STRING&#160;</td><td class="fielddoc"><p>The override is enabled but no configuration is published. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa551530ec1af53eaa77c1bde0ca457b4b" name="a81bd7999a2e707e38898a925114053eaa551530ec1af53eaa77c1bde0ca457b4b"></a>PARSE_ERROR&#160;</td><td class="fielddoc"><p>The published configuration failed to parse or was too large. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa696b031073e74bf2cb98e5ef201d4aa3" name="a81bd7999a2e707e38898a925114053eaa696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"><p>The camera reported a state this library does not know. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="add4c113a006e408016a3beed0467b6a4" name="add4c113a006e408016a3beed0467b6a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add4c113a006e408016a3beed0467b6a4">&#9670;&#160;</a></span>SharedMapState</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">limelight::SharedMapState</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Shared field map state reported by the camera. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a88559a0cfd8250c9d65970cc145c92d4" name="add4c113a006e408016a3beed0467b6a4a88559a0cfd8250c9d65970cc145c92d4"></a>OFF&#160;</td><td class="fielddoc"><p>No shared map published. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a18ff74f43da410c5529f7d6fca84f115" name="add4c113a006e408016a3beed0467b6a4a18ff74f43da410c5529f7d6fca84f115"></a>ACTIVE&#160;</td><td class="fielddoc"><p>The shared map is in use. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a551530ec1af53eaa77c1bde0ca457b4b" name="add4c113a006e408016a3beed0467b6a4a551530ec1af53eaa77c1bde0ca457b4b"></a>PARSE_ERROR&#160;</td><td class="fielddoc"><p>The published map failed to parse or was too large. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a696b031073e74bf2cb98e5ef201d4aa3" name="add4c113a006e408016a3beed0467b6a4a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"><p>The camera reported a state this library does not know. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a2569f2d25f404656f5db5f90ce788d9e" name="a2569f2d25f404656f5db5f90ce788d9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2569f2d25f404656f5db5f90ce788d9e">&#9670;&#160;</a></span>LoadStatus</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9e">limelight::LoadStatus</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Result of loading a <a class="el" href="classlimelight_1_1Limelight_1_1PipelineConfiguration.html" title="An immutable, validated pipeline configuration override.">Limelight::PipelineConfiguration</a> or <a class="el" href="classlimelight_1_1Limelight_1_1FieldMap.html" title="An immutable, validated shared field map.">Limelight::FieldMap</a>. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9eae0aa021e21dddbd6d8cecec71e9cf564" name="a2569f2d25f404656f5db5f90ce788d9eae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"><p>Loaded and within the size cap. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9ea8e223fab53a3fcb8e2767b8d03957026" name="a2569f2d25f404656f5db5f90ce788d9ea8e223fab53a3fcb8e2767b8d03957026"></a>NO_CONTENTS&#160;</td><td class="fielddoc"><p>No contents or no file name were given (empty) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9ea82fbe87835b941addda10c26ff6e98d6" name="a2569f2d25f404656f5db5f90ce788d9ea82fbe87835b941addda10c26ff6e98d6"></a>READ_FAILED&#160;</td><td class="fielddoc"><p>The deploy-folder file could not be read. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9ea5a28a0d6dc6d88bf608c575966a85809" name="a2569f2d25f404656f5db5f90ce788d9ea5a28a0d6dc6d88bf608c575966a85809"></a>TOO_LARGE&#160;</td><td class="fielddoc"><p>The contents exceed the size cap. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a255aff3b61615749d53ad8349a797328" name="a255aff3b61615749d53ad8349a797328"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a255aff3b61615749d53ad8349a797328">&#9670;&#160;</a></span>PoseEstimateType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328">limelight::PoseEstimateType</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The robot pose estimate outputs. </p>
-<p>Names use the form {algorithm}_{origin}.</p>
-<p>MegaTag1 (MT1) computes the full robot pose from tag geometry only. MegaTag2 (MT2) also uses the robot orientation from <a class="el" href="classlimelight_1_1Limelight.html#a22b8adcf13c988cf5077f7d463cce482" title="(ADVANCED) Sets the individual robot orientation of this camera for the MegaTag2 algorithm.">Limelight::SetRobotOrientation()</a> or <a class="el" href="classlimelight_1_1Limelight.html#aed823283c798c2d9691218170bd7077e" title="Sets the robot orientation for MegaTag2 on the shared &quot;limelightshared&quot; table.">Limelight::SetSharedRobotOrientation()</a>. MT2 is usually more stable. MT2 requires you to publish the orientation every loop. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328aa1902b37417ff417cfe360fa4baaad9b" name="a255aff3b61615749d53ad8349a797328aa1902b37417ff417cfe360fa4baaad9b"></a>MT1_WPIBLUE&#160;</td><td class="fielddoc"><p>MegaTag1, WPILib blue-alliance-corner origin (botpose_wpiblue) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328aa04d87fb41681586e7957f9e49699526" name="a255aff3b61615749d53ad8349a797328aa04d87fb41681586e7957f9e49699526"></a>MT1_WPIRED&#160;</td><td class="fielddoc"><p>MegaTag1, WPILib red-alliance-corner origin (botpose_wpired) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328a949e6cd1fd7398ffcc1f9e0d5c4ceb93" name="a255aff3b61615749d53ad8349a797328a949e6cd1fd7398ffcc1f9e0d5c4ceb93"></a>MT2_WPIBLUE&#160;</td><td class="fielddoc"><p>MegaTag2, WPILib blue-alliance-corner origin (botpose_orb_wpiblue) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328a94086a798da68470b454e5966ceed1f8" name="a255aff3b61615749d53ad8349a797328a94086a798da68470b454e5966ceed1f8"></a>MT2_WPIRED&#160;</td><td class="fielddoc"><p>MegaTag2, WPILib red-alliance-corner origin (botpose_orb_wpired) </p>
+<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a7d71ed2af4cc5c6a8380324d9bc4a45f" name="a6186f01ca1ee794b48b2d14506c1e777a7d71ed2af4cc5c6a8380324d9bc4a45f"></a>X4&#160;</td><td class="fielddoc"><p>4x downscale </p>
 </td></tr>
 </table>
 
@@ -451,7 +316,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>IMU sources for the robot yaw that MegaTag2 uses. </p>
-<p>The external orientation comes from <a class="el" href="classlimelight_1_1Limelight.html#a22b8adcf13c988cf5077f7d463cce482" title="(ADVANCED) Sets the individual robot orientation of this camera for the MegaTag2 algorithm.">Limelight::SetRobotOrientation()</a> or <a class="el" href="classlimelight_1_1Limelight.html#aed823283c798c2d9691218170bd7077e" title="Sets the robot orientation for MegaTag2 on the shared &quot;limelightshared&quot; table.">Limelight::SetSharedRobotOrientation()</a>. Only cameras with a built-in IMU use this. </p>
+<p>The external orientation comes from <a class="el" href="classlimelight_1_1Limelight.html#abb63822f656d40bf783466de6922493d" title="(ADVANCED) Sets the individual robot orientation of this camera for the MegaTag2 algorithm.">Limelight::SetRobotOrientation()</a> or <a class="el" href="classlimelight_1_1Limelight.html#a152deddefbea1b3b4e69c05ac699b422" title="Sets the robot orientation for MegaTag2 on the shared &quot;limelightshared&quot; table.">Limelight::SetSharedRobotOrientation()</a>. Only cameras with a built-in IMU use this. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a455b1b33a8e4588648a5c371331464aaa3932d629fb5e2be9d09b3a4485b3cc9d" name="a455b1b33a8e4588648a5c371331464aaa3932d629fb5e2be9d09b3a4485b3cc9d"></a>EXTERNAL&#160;</td><td class="fielddoc"><p>Use the external orientation directly. </p>
 </td></tr>
@@ -506,8 +371,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6186f01ca1ee794b48b2d14506c1e777" name="a6186f01ca1ee794b48b2d14506c1e777"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6186f01ca1ee794b48b2d14506c1e777">&#9670;&#160;</a></span>DownscaleOverride</h2>
+<a id="a2569f2d25f404656f5db5f90ce788d9e" name="a2569f2d25f404656f5db5f90ce788d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2569f2d25f404656f5db5f90ce788d9e">&#9670;&#160;</a></span>LoadStatus</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,7 +381,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777">limelight::DownscaleOverride</a></td>
+          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a2569f2d25f404656f5db5f90ce788d9e">limelight::LoadStatus</a></td>
         </tr>
       </table>
   </td>
@@ -526,20 +391,160 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>AprilTag detector downscaling factors. </p>
-<p>More downscaling improves performance. It can reduce the detection range. </p>
+<p>Result of loading a Limelight::PipelineConfiguration or Limelight::FieldMap. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a90f1ef9fb42d6a97265864919da25286" name="a6186f01ca1ee794b48b2d14506c1e777a90f1ef9fb42d6a97265864919da25286"></a>PIPELINE_CONTROL&#160;</td><td class="fielddoc"><p>Use the downscale configured in the current pipeline. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9eae0aa021e21dddbd6d8cecec71e9cf564" name="a2569f2d25f404656f5db5f90ce788d9eae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"><p>Loaded and within the size cap. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777abb7f5ae6220c9828e5ec91faf054197c" name="a6186f01ca1ee794b48b2d14506c1e777abb7f5ae6220c9828e5ec91faf054197c"></a>X1&#160;</td><td class="fielddoc"><p>No downscaling. </p>
+<tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9ea8e223fab53a3fcb8e2767b8d03957026" name="a2569f2d25f404656f5db5f90ce788d9ea8e223fab53a3fcb8e2767b8d03957026"></a>NO_CONTENTS&#160;</td><td class="fielddoc"><p>No contents or no file name were given (empty) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777acfd9d27f728a0a676a477d5280a38e63" name="a6186f01ca1ee794b48b2d14506c1e777acfd9d27f728a0a676a477d5280a38e63"></a>X1_5&#160;</td><td class="fielddoc"><p>1.5x downscale </p>
+<tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9ea82fbe87835b941addda10c26ff6e98d6" name="a2569f2d25f404656f5db5f90ce788d9ea82fbe87835b941addda10c26ff6e98d6"></a>READ_FAILED&#160;</td><td class="fielddoc"><p>The deploy-folder file could not be read. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a54105bddbfe3f639d49cbe8f5182c958" name="a6186f01ca1ee794b48b2d14506c1e777a54105bddbfe3f639d49cbe8f5182c958"></a>X2&#160;</td><td class="fielddoc"><p>2x downscale </p>
+<tr><td class="fieldname"><a id="a2569f2d25f404656f5db5f90ce788d9ea5a28a0d6dc6d88bf608c575966a85809" name="a2569f2d25f404656f5db5f90ce788d9ea5a28a0d6dc6d88bf608c575966a85809"></a>TOO_LARGE&#160;</td><td class="fielddoc"><p>The contents exceed the size cap. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a0541026d4fa57ca1cc1a6fe30f57fea1" name="a6186f01ca1ee794b48b2d14506c1e777a0541026d4fa57ca1cc1a6fe30f57fea1"></a>X3&#160;</td><td class="fielddoc"><p>3x downscale </p>
+</table>
+
+</div>
+</div>
+<a id="a81bd7999a2e707e38898a925114053ea" name="a81bd7999a2e707e38898a925114053ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81bd7999a2e707e38898a925114053ea">&#9670;&#160;</a></span>PipelineConfigurationOverrideState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">limelight::PipelineConfigurationOverrideState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pipeline configuration override state reported by the camera. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa88559a0cfd8250c9d65970cc145c92d4" name="a81bd7999a2e707e38898a925114053eaa88559a0cfd8250c9d65970cc145c92d4"></a>OFF&#160;</td><td class="fielddoc"><p>No override requested. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6186f01ca1ee794b48b2d14506c1e777a7d71ed2af4cc5c6a8380324d9bc4a45f" name="a6186f01ca1ee794b48b2d14506c1e777a7d71ed2af4cc5c6a8380324d9bc4a45f"></a>X4&#160;</td><td class="fielddoc"><p>4x downscale </p>
+<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa18ff74f43da410c5529f7d6fca84f115" name="a81bd7999a2e707e38898a925114053eaa18ff74f43da410c5529f7d6fca84f115"></a>ACTIVE&#160;</td><td class="fielddoc"><p>The override is applied. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa273cc667bc4131ab10a1ecb2000fadea" name="a81bd7999a2e707e38898a925114053eaa273cc667bc4131ab10a1ecb2000fadea"></a>FORCED_OFF&#160;</td><td class="fielddoc"><p>The camera web interface forced the override off. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaabafc55dde8d86565d8263c1038b70cfc" name="a81bd7999a2e707e38898a925114053eaabafc55dde8d86565d8263c1038b70cfc"></a>NO_STRING&#160;</td><td class="fielddoc"><p>The override is enabled but no configuration is published. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa551530ec1af53eaa77c1bde0ca457b4b" name="a81bd7999a2e707e38898a925114053eaa551530ec1af53eaa77c1bde0ca457b4b"></a>PARSE_ERROR&#160;</td><td class="fielddoc"><p>The published configuration failed to parse or was too large. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a81bd7999a2e707e38898a925114053eaa696b031073e74bf2cb98e5ef201d4aa3" name="a81bd7999a2e707e38898a925114053eaa696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"><p>The camera reported a state this library does not know. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a255aff3b61615749d53ad8349a797328" name="a255aff3b61615749d53ad8349a797328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255aff3b61615749d53ad8349a797328">&#9670;&#160;</a></span>PoseEstimateType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a255aff3b61615749d53ad8349a797328">limelight::PoseEstimateType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The robot pose estimate outputs. </p>
+<p>Names use the form {algorithm}_{origin}.</p>
+<p>MegaTag1 (MT1) computes the full robot pose from tag geometry only. MegaTag2 (MT2) also uses the robot orientation from <a class="el" href="classlimelight_1_1Limelight.html#abb63822f656d40bf783466de6922493d" title="(ADVANCED) Sets the individual robot orientation of this camera for the MegaTag2 algorithm.">Limelight::SetRobotOrientation()</a> or <a class="el" href="classlimelight_1_1Limelight.html#a152deddefbea1b3b4e69c05ac699b422" title="Sets the robot orientation for MegaTag2 on the shared &quot;limelightshared&quot; table.">Limelight::SetSharedRobotOrientation()</a>. MT2 is usually more stable. MT2 requires you to publish the orientation every loop. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328aa1902b37417ff417cfe360fa4baaad9b" name="a255aff3b61615749d53ad8349a797328aa1902b37417ff417cfe360fa4baaad9b"></a>MT1_WPIBLUE&#160;</td><td class="fielddoc"><p>MegaTag1, WPILib blue-alliance-corner origin (botpose_wpiblue) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328aa04d87fb41681586e7957f9e49699526" name="a255aff3b61615749d53ad8349a797328aa04d87fb41681586e7957f9e49699526"></a>MT1_WPIRED&#160;</td><td class="fielddoc"><p>MegaTag1, WPILib red-alliance-corner origin (botpose_wpired) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328a949e6cd1fd7398ffcc1f9e0d5c4ceb93" name="a255aff3b61615749d53ad8349a797328a949e6cd1fd7398ffcc1f9e0d5c4ceb93"></a>MT2_WPIBLUE&#160;</td><td class="fielddoc"><p>MegaTag2, WPILib blue-alliance-corner origin (botpose_orb_wpiblue) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a255aff3b61615749d53ad8349a797328a94086a798da68470b454e5966ceed1f8" name="a255aff3b61615749d53ad8349a797328a94086a798da68470b454e5966ceed1f8"></a>MT2_WPIRED&#160;</td><td class="fielddoc"><p>MegaTag2, WPILib red-alliance-corner origin (botpose_orb_wpired) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="add4c113a006e408016a3beed0467b6a4" name="add4c113a006e408016a3beed0467b6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add4c113a006e408016a3beed0467b6a4">&#9670;&#160;</a></span>SharedMapState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">limelight::SharedMapState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shared field map state reported by the camera. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a88559a0cfd8250c9d65970cc145c92d4" name="add4c113a006e408016a3beed0467b6a4a88559a0cfd8250c9d65970cc145c92d4"></a>OFF&#160;</td><td class="fielddoc"><p>No shared map published. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a18ff74f43da410c5529f7d6fca84f115" name="add4c113a006e408016a3beed0467b6a4a18ff74f43da410c5529f7d6fca84f115"></a>ACTIVE&#160;</td><td class="fielddoc"><p>The shared map is in use. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a551530ec1af53eaa77c1bde0ca457b4b" name="add4c113a006e408016a3beed0467b6a4a551530ec1af53eaa77c1bde0ca457b4b"></a>PARSE_ERROR&#160;</td><td class="fielddoc"><p>The published map failed to parse or was too large. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add4c113a006e408016a3beed0467b6a4a696b031073e74bf2cb98e5ef201d4aa3" name="add4c113a006e408016a3beed0467b6a4a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"><p>The camera reported a state this library does not know. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a99f4514031e5c156442101bc5be5688b" name="a99f4514031e5c156442101bc5be5688b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f4514031e5c156442101bc5be5688b">&#9670;&#160;</a></span>Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacelimelight.html#a99f4514031e5c156442101bc5be5688b">limelight::Status</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Health of a camera. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688bae0aa021e21dddbd6d8cecec71e9cf564" name="a99f4514031e5c156442101bc5be5688bae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"><p>A decodable frame has been received recently. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688baee69335f36c559202930f685b01c009e" name="a99f4514031e5c156442101bc5be5688baee69335f36c559202930f685b01c009e"></a>NO_DATA&#160;</td><td class="fielddoc"><p>The camera has not sent a results envelope. </p>
+<p>Possible causes: the camera is off, the name is wrong, or MsgPack output is disabled </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688ba4d855a061b3066dc14a3b12ed26b5456" name="a99f4514031e5c156442101bc5be5688ba4d855a061b3066dc14a3b12ed26b5456"></a>STALE&#160;</td><td class="fielddoc"><p>The newest frame is older than the stale threshold. </p>
+<p>The camera is disconnected or has stopped </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a99f4514031e5c156442101bc5be5688bae0b52f1984ce67b81d11ae5698bf39c3" name="a99f4514031e5c156442101bc5be5688bae0b52f1984ce67b81d11ae5698bf39c3"></a>DECODE_ERROR&#160;</td><td class="fielddoc"><p>The newest frame did not decode. </p>
+<p>See <a class="el" href="classlimelight_1_1LimelightResults.html#a3edfb44db6df8188fed39c5e1bde0578" title="Non-empty if the envelope failed to decode.">LimelightResults::error</a> </p>
 </td></tr>
 </table>
 
@@ -604,58 +609,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a58ec1365f15f5b9e339ce152f6867995" name="a58ec1365f15f5b9e339ce152f6867995"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58ec1365f15f5b9e339ce152f6867995">&#9670;&#160;</a></span>ParsePipelineConfigurationOverrideState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacelimelight.html#a81bd7999a2e707e38898a925114053ea">PipelineConfigurationOverrideState</a> limelight::ParsePipelineConfigurationOverrideState </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a49dc0b331fb9c0872da0a24f1a1387d3" name="a49dc0b331fb9c0872da0a24f1a1387d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49dc0b331fb9c0872da0a24f1a1387d3">&#9670;&#160;</a></span>ParseSharedMapState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacelimelight.html#add4c113a006e408016a3beed0467b6a4">SharedMapState</a> limelight::ParseSharedMapState </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="adfd39c7cbe6000b5ac3692fa89e3b51d" name="adfd39c7cbe6000b5ac3692fa89e3b51d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfd39c7cbe6000b5ac3692fa89e3b51d">&#9670;&#160;</a></span>IMUModeFromNT()</h2>
 
@@ -683,8 +636,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a23cf560a925ac7c5db221961deb8eab0" name="a23cf560a925ac7c5db221961deb8eab0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23cf560a925ac7c5db221961deb8eab0">&#9670;&#160;</a></span>NT_TICKS_PER_SECOND</h2>
+<a id="a41cd7705b03ad01f93dc4e9ff211c25a" name="a41cd7705b03ad01f93dc4e9ff211c25a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41cd7705b03ad01f93dc4e9ff211c25a">&#9670;&#160;</a></span>kPoseArrayLength</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +646,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double limelight::NT_TICKS_PER_SECOND = 1.0e9</td>
+          <td class="memname">constexpr size_t limelight::kPoseArrayLength = 6</td>
         </tr>
       </table>
   </td>
@@ -703,8 +656,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>NetworkTables timestamp ticks per second for the WPILib build this library targets. </p>
-<p>WPILib 2027 alpha-7 and later use 1e9. Alpha-6 and earlier use 1e6. Divide a NetworkTables timestamp by this value to get seconds. </p>
+<p>Length of every pose array: [x, y, z, roll, pitch, yaw]. </p>
+<p>The camera always sends six values, all zero when there is no pose. Pose and standard deviation arrays default to six zeros, so index access is safe before the first frame. </p>
 
 </div>
 </div>
@@ -729,6 +682,31 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Number of PoseEstimateType values. </p>
+
+</div>
+</div>
+<a id="a23cf560a925ac7c5db221961deb8eab0" name="a23cf560a925ac7c5db221961deb8eab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23cf560a925ac7c5db221961deb8eab0">&#9670;&#160;</a></span>NT_TICKS_PER_SECOND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr double limelight::NT_TICKS_PER_SECOND = 1.0e9</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NetworkTables timestamp ticks per second for the WPILib build this library targets. </p>
+<p>WPILib 2027 alpha-7 and later use 1e9. Alpha-6 and earlier use 1e6. Divide a NetworkTables timestamp by this value to get seconds. </p>
 
 </div>
 </div>

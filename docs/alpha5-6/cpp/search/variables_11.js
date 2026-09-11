@@ -7,7 +7,7 @@ var searchData=
   ['stddevs_4',['stdDevs',['../classlimelight_1_1PoseEstimate.html#a81c90f2d2a5241fe4190a6e02efaf4d9',1,'limelight::PoseEstimate']]],
   ['stddevsmt1_5',['stdDevsMT1',['../classlimelight_1_1LimelightResults.html#acba67f3a82b3bbe1891a5397a84715b2',1,'limelight::LimelightResults']]],
   ['stddevsmt2_6',['stdDevsMT2',['../classlimelight_1_1LimelightResults.html#acaf91b9a8b60386519738d616f3e14e6',1,'limelight::LimelightResults']]],
-  ['storedseconds_7',['storedSeconds',['../structlimelight_1_1RewindData.html#a74a39d75a08c26bf475336db91b35095',1,'limelight::RewindData']]],
+  ['stored_7',['stored',['../structlimelight_1_1RewindData.html#afd226aef2a3e89225d5d8e804784f8e5',1,'limelight::RewindData']]],
   ['supported_5fprotocol_5fversion_8',['SUPPORTED_PROTOCOL_VERSION',['../classlimelight_1_1Limelight.html#acfcebaec28ad130e5748522a0c6996ef',1,'limelight::Limelight']]],
   ['systemcore_5fusb0_9',['SYSTEMCORE_USB0',['../classlimelight_1_1Limelight.html#abf08411ce24296b57ba58e7caaac7f25',1,'limelight::Limelight']]],
   ['systemcore_5fusb1_10',['SYSTEMCORE_USB1',['../classlimelight_1_1Limelight.html#a02d737c7f5969a0081720033d35b43ba',1,'limelight::Limelight']]],

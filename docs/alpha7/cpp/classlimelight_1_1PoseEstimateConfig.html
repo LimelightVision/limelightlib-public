@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta8-alpha7</span>
+   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta9-alpha7</span>
    </div>
    <div id="projectbrief">Limelight interface for WPILib C++ projects</div>
   </td>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('classlimelight_1_1PoseEstimateConfig.h
 <p>A reusable configuration object for rejection filters and standard deviation scaling.  
  <a href="classlimelight_1_1PoseEstimateConfig.html#details">More...</a></p>
 
-<p><code>#include &lt;Limelight.h&gt;</code></p>
+<p><code>#include &lt;PoseEstimateConfig.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -113,39 +113,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2932cee172f09c14b931cf995cbe827d" id="r_a2932cee172f09c14b931cf995cbe827d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a2932cee172f09c14b931cf995cbe827d">WithMaxSingleTagAmbiguity</a> (double maxSingleTagAmbiguity)</td></tr>
 <tr class="memdesc:a2932cee172f09c14b931cf995cbe827d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects single-tag estimates when the ambiguity of the fielded tag is above this value (0-1).  <br /></td></tr>
 <tr class="separator:a2932cee172f09c14b931cf995cbe827d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc21f7c4f167cb68b141488ebd81c19" id="r_a6cc21f7c4f167cb68b141488ebd81c19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a6cc21f7c4f167cb68b141488ebd81c19">WithMaxSingleTagDistance</a> (double maxSingleTagDistanceMeters)</td></tr>
-<tr class="memdesc:a6cc21f7c4f167cb68b141488ebd81c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects single-tag estimates when the tag is farther than this distance in meters.  <br /></td></tr>
-<tr class="separator:a6cc21f7c4f167cb68b141488ebd81c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51eec66e6a1250fabf0fface329c338d" id="r_a51eec66e6a1250fabf0fface329c338d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a51eec66e6a1250fabf0fface329c338d">WithMaxAvgTagDistance</a> (double maxAvgTagDistanceMeters)</td></tr>
-<tr class="memdesc:a51eec66e6a1250fabf0fface329c338d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects estimates when the average tag distance is above this value in meters.  <br /></td></tr>
-<tr class="separator:a51eec66e6a1250fabf0fface329c338d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad771a6d289bd3cbcfe8a92f78fa4df29" id="r_ad771a6d289bd3cbcfe8a92f78fa4df29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ad771a6d289bd3cbcfe8a92f78fa4df29">WithMaxSingleTagDistance</a> (wpi::units::meter_t maxSingleTagDistance)</td></tr>
+<tr class="memdesc:ad771a6d289bd3cbcfe8a92f78fa4df29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects single-tag estimates when the tag is farther than this distance in meters.  <br /></td></tr>
+<tr class="separator:ad771a6d289bd3cbcfe8a92f78fa4df29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada61f8ae45b1a0da2aa55f33059336f0" id="r_ada61f8ae45b1a0da2aa55f33059336f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ada61f8ae45b1a0da2aa55f33059336f0">WithMaxAvgTagDistance</a> (wpi::units::meter_t maxAvgTagDistance)</td></tr>
+<tr class="memdesc:ada61f8ae45b1a0da2aa55f33059336f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects estimates when the average tag distance is above this value in meters.  <br /></td></tr>
+<tr class="separator:ada61f8ae45b1a0da2aa55f33059336f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f30036f5c7d3405167fac899325873b" id="r_a3f30036f5c7d3405167fac899325873b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a3f30036f5c7d3405167fac899325873b">WithMinAvgTagArea</a> (double minAvgTagArea)</td></tr>
 <tr class="memdesc:a3f30036f5c7d3405167fac899325873b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects estimates when the average tag area (percentage of image) is below this value.  <br /></td></tr>
 <tr class="separator:a3f30036f5c7d3405167fac899325873b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac01e79c42af99037786567793f28e4" id="r_a9ac01e79c42af99037786567793f28e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a9ac01e79c42af99037786567793f28e4">WithFieldBounds</a> (double fieldLengthMeters, double fieldWidthMeters)</td></tr>
-<tr class="memdesc:a9ac01e79c42af99037786567793f28e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects estimates outside the field.  <br /></td></tr>
-<tr class="separator:a9ac01e79c42af99037786567793f28e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6849e9146befea76151c33a7bffeec20" id="r_a6849e9146befea76151c33a7bffeec20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a6849e9146befea76151c33a7bffeec20">WithFieldBoundsMargin</a> (double marginMeters)</td></tr>
-<tr class="memdesc:a6849e9146befea76151c33a7bffeec20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the margin for the field bounds check.  <br /></td></tr>
-<tr class="separator:a6849e9146befea76151c33a7bffeec20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6314dc14347525c70dda33898d6cd011" id="r_a6314dc14347525c70dda33898d6cd011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a6314dc14347525c70dda33898d6cd011">WithStdDevXY</a> (double baseMeters)</td></tr>
-<tr class="memdesc:a6314dc14347525c70dda33898d6cd011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base XY standard deviation in meters.  <br /></td></tr>
-<tr class="separator:a6314dc14347525c70dda33898d6cd011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41dcfad614f016cda453f1858c5d1de5" id="r_a41dcfad614f016cda453f1858c5d1de5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a41dcfad614f016cda453f1858c5d1de5">WithStdDevXY</a> (double baseMeters, double minMeters, double maxMeters)</td></tr>
-<tr class="memdesc:a41dcfad614f016cda453f1858c5d1de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base XY standard deviation.  <br /></td></tr>
-<tr class="separator:a41dcfad614f016cda453f1858c5d1de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4846bd61c14808c5e282863c08e37a1f" id="r_a4846bd61c14808c5e282863c08e37a1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a4846bd61c14808c5e282863c08e37a1f">WithStdDevTheta</a> (double baseRadians)</td></tr>
-<tr class="memdesc:a4846bd61c14808c5e282863c08e37a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base heading standard deviation in radians.  <br /></td></tr>
-<tr class="separator:a4846bd61c14808c5e282863c08e37a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af75baf17bf47d907bf9c623b38793985" id="r_af75baf17bf47d907bf9c623b38793985"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#af75baf17bf47d907bf9c623b38793985">WithStdDevTheta</a> (double baseRadians, double minRadians, double maxRadians)</td></tr>
-<tr class="memdesc:af75baf17bf47d907bf9c623b38793985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base heading standard deviation.  <br /></td></tr>
-<tr class="separator:af75baf17bf47d907bf9c623b38793985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a063b5ba346ea5e5aec34d77e6dc9d0" id="r_a9a063b5ba346ea5e5aec34d77e6dc9d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a9a063b5ba346ea5e5aec34d77e6dc9d0">WithFieldBounds</a> (wpi::units::meter_t fieldLength, wpi::units::meter_t fieldWidth)</td></tr>
+<tr class="memdesc:a9a063b5ba346ea5e5aec34d77e6dc9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects estimates outside the field.  <br /></td></tr>
+<tr class="separator:a9a063b5ba346ea5e5aec34d77e6dc9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae374c65e8e322a6a518d7a46e7f38a0b" id="r_ae374c65e8e322a6a518d7a46e7f38a0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ae374c65e8e322a6a518d7a46e7f38a0b">WithFieldBoundsMargin</a> (wpi::units::meter_t margin)</td></tr>
+<tr class="memdesc:ae374c65e8e322a6a518d7a46e7f38a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the margin for the field bounds check.  <br /></td></tr>
+<tr class="separator:ae374c65e8e322a6a518d7a46e7f38a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad222c85dc4e6398728a93842ed85bf93" id="r_ad222c85dc4e6398728a93842ed85bf93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ad222c85dc4e6398728a93842ed85bf93">WithStdDevXY</a> (wpi::units::meter_t base)</td></tr>
+<tr class="memdesc:ad222c85dc4e6398728a93842ed85bf93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base XY standard deviation in meters.  <br /></td></tr>
+<tr class="separator:ad222c85dc4e6398728a93842ed85bf93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0828e9d6522e948491926e39f1036972" id="r_a0828e9d6522e948491926e39f1036972"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a0828e9d6522e948491926e39f1036972">WithStdDevXY</a> (wpi::units::meter_t base, wpi::units::meter_t min, wpi::units::meter_t max)</td></tr>
+<tr class="memdesc:a0828e9d6522e948491926e39f1036972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base XY standard deviation.  <br /></td></tr>
+<tr class="separator:a0828e9d6522e948491926e39f1036972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110983417b3e2a623b657d3809f4ab98" id="r_a110983417b3e2a623b657d3809f4ab98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a110983417b3e2a623b657d3809f4ab98">WithStdDevTheta</a> (wpi::units::radian_t base)</td></tr>
+<tr class="memdesc:a110983417b3e2a623b657d3809f4ab98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base heading standard deviation in radians.  <br /></td></tr>
+<tr class="separator:a110983417b3e2a623b657d3809f4ab98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0423c0c4aa39d1b1a358668caf1b69" id="r_a7e0423c0c4aa39d1b1a358668caf1b69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a7e0423c0c4aa39d1b1a358668caf1b69">WithStdDevTheta</a> (wpi::units::radian_t base, wpi::units::radian_t min, wpi::units::radian_t max)</td></tr>
+<tr class="memdesc:a7e0423c0c4aa39d1b1a358668caf1b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the base heading standard deviation.  <br /></td></tr>
+<tr class="separator:a7e0423c0c4aa39d1b1a358668caf1b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac63ed1a1b67ea72f7867bc6df11febbc" id="r_ac63ed1a1b67ea72f7867bc6df11febbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ac63ed1a1b67ea72f7867bc6df11febbc">WithStdDevDistanceScaling</a> (double exponent)</td></tr>
 <tr class="memdesc:ac63ed1a1b67ea72f7867bc6df11febbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales the standard deviations by avgTagDistance^exponent.  <br /></td></tr>
 <tr class="separator:ac63ed1a1b67ea72f7867bc6df11febbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb56f5c10187b4ace9d92774feb1fbdc" id="r_afb56f5c10187b4ace9d92774feb1fbdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#afb56f5c10187b4ace9d92774feb1fbdc">WithStdDevDistanceScaling</a> (double exponent, double minMeters, double maxMeters)</td></tr>
-<tr class="memdesc:afb56f5c10187b4ace9d92774feb1fbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ac63ed1a1b67ea72f7867bc6df11febbc" title="Scales the standard deviations by avgTagDistance^exponent.">WithStdDevDistanceScaling(double)</a>.  <br /></td></tr>
-<tr class="separator:afb56f5c10187b4ace9d92774feb1fbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b149bc23088f4fe3f55bfe2d76945e" id="r_a49b149bc23088f4fe3f55bfe2d76945e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a49b149bc23088f4fe3f55bfe2d76945e">WithStdDevDistanceScaling</a> (double exponent, wpi::units::meter_t min, wpi::units::meter_t max)</td></tr>
+<tr class="memdesc:a49b149bc23088f4fe3f55bfe2d76945e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ac63ed1a1b67ea72f7867bc6df11febbc" title="Scales the standard deviations by avgTagDistance^exponent.">WithStdDevDistanceScaling(double)</a>.  <br /></td></tr>
+<tr class="separator:a49b149bc23088f4fe3f55bfe2d76945e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae83f3aa9784832eb45fa35efd5dd61ab" id="r_ae83f3aa9784832eb45fa35efd5dd61ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ae83f3aa9784832eb45fa35efd5dd61ab">WithStdDevTagCountDivision</a> (double exponent)</td></tr>
 <tr class="memdesc:ae83f3aa9784832eb45fa35efd5dd61ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides the standard deviations by fieldedTagCount^exponent.  <br /></td></tr>
 <tr class="separator:ae83f3aa9784832eb45fa35efd5dd61ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,11 +159,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2e343ed1278bec75cae220e6cd2037cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The MegaTag2 defaults.  <br /></td></tr>
 <tr class="separator:a2e343ed1278bec75cae220e6cd2037cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94b18f7f9a3ca5b016f17a8ffe1b3de3" id="r_a94b18f7f9a3ca5b016f17a8ffe1b3de3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a94b18f7f9a3ca5b016f17a8ffe1b3de3">NoFiltering</a> ()</td></tr>
-<tr class="memdesc:a94b18f7f9a3ca5b016f17a8ffe1b3de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts every structurally valid pose.  <br /></td></tr>
+<tr class="memdesc:a94b18f7f9a3ca5b016f17a8ffe1b3de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts every estimate that decoded with a pose and a timestamp.  <br /></td></tr>
 <tr class="separator:a94b18f7f9a3ca5b016f17a8ffe1b3de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4337c6367004f245a53ebd15c3cba9bd" id="r_a4337c6367004f245a53ebd15c3cba9bd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a4337c6367004f245a53ebd15c3cba9bd">NoFiltering</a> (double xyStdDevMeters, double thetaStdDevRadians)</td></tr>
-<tr class="memdesc:a4337c6367004f245a53ebd15c3cba9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts every structurally valid pose.  <br /></td></tr>
-<tr class="separator:a4337c6367004f245a53ebd15c3cba9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03a2c2506e59f026caea67e7ee10fab" id="r_af03a2c2506e59f026caea67e7ee10fab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#af03a2c2506e59f026caea67e7ee10fab">NoFiltering</a> (wpi::units::meter_t xyStdDev, wpi::units::radian_t thetaStdDev)</td></tr>
+<tr class="memdesc:af03a2c2506e59f026caea67e7ee10fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts every estimate that decoded with a pose and a timestamp.  <br /></td></tr>
+<tr class="separator:af03a2c2506e59f026caea67e7ee10fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a690ff9d5445198fdc024fb14833c4f7b" id="r_a690ff9d5445198fdc024fb14833c4f7b"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a690ff9d5445198fdc024fb14833c4f7b">DescribeRejection</a> (int flags)</td></tr>
 <tr class="separator:a690ff9d5445198fdc024fb14833c4f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -216,27 +216,28 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A reusable configuration object for rejection filters and standard deviation scaling. </p>
-<p>Start from a factory (<a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a8b47b8dc57a1e03c21b0775921e0cc35" title="The MegaTag1 defaults.">DefaultMT1()</a>, <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a2e343ed1278bec75cae220e6cd2037cd" title="The MegaTag2 defaults.">DefaultMT2()</a>, <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a94b18f7f9a3ca5b016f17a8ffe1b3de3" title="Accepts every structurally valid pose.">NoFiltering()</a>) or from a new instance. Chain the With* methods. Attach the result with <a class="el" href="classlimelight_1_1Limelight.html#ad2698247a7fae9ecd672b1f02330f98f" title="Configures filtering and fusion standard deviations for every MegaTag1 pose estimate.">Limelight::WithPoseEstimateConfig_MT1()</a> or <a class="el" href="classlimelight_1_1Limelight.html#aa665b6ab7b508b39123f88298c69fed6" title="Configures filtering and fusion standard deviations for every MegaTag2 pose estimate.">Limelight::WithPoseEstimateConfig_MT2()</a>.</p>
-<p>A new instance accepts every structurally valid estimate that has at least one fielded tag. It uses the same standard deviation model as <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a2e343ed1278bec75cae220e6cd2037cd" title="The MegaTag2 defaults.">DefaultMT2()</a>.</p>
-<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_class" href="classlimelight_1_1Limelight.html">limelight::Limelight</a>;</div>
+<p>Start from a factory (<a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a8b47b8dc57a1e03c21b0775921e0cc35" title="The MegaTag1 defaults.">DefaultMT1()</a>, <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a2e343ed1278bec75cae220e6cd2037cd" title="The MegaTag2 defaults.">DefaultMT2()</a>, <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a94b18f7f9a3ca5b016f17a8ffe1b3de3" title="Accepts every estimate that decoded with a pose and a timestamp.">NoFiltering()</a>) or from a new instance. Chain the With* methods. Attach the result with <a class="el" href="classlimelight_1_1Limelight.html#ad2698247a7fae9ecd672b1f02330f98f" title="Configures filtering and fusion standard deviations for every MegaTag1 pose estimate.">Limelight::WithPoseEstimateConfig_MT1()</a> or <a class="el" href="classlimelight_1_1Limelight.html#aa665b6ab7b508b39123f88298c69fed6" title="Configures filtering and fusion standard deviations for every MegaTag2 pose estimate.">Limelight::WithPoseEstimateConfig_MT2()</a>.</p>
+<p>A new instance accepts every estimate that decoded with a pose and a timestamp and has at least one fielded tag. It uses the same standard deviation model as <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a2e343ed1278bec75cae220e6cd2037cd" title="The MegaTag2 defaults.">DefaultMT2()</a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>wpi::units::literals;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_class" href="classlimelight_1_1Limelight.html">limelight::Limelight</a>;</div>
 <div class="line"><span class="keyword">using </span><a class="code hl_class" href="classlimelight_1_1PoseEstimateConfig.html">limelight::PoseEstimateConfig</a>;</div>
 <div class="line"><a class="code hl_class" href="classlimelight_1_1Limelight.html">Limelight</a> camera{<span class="stringliteral">&quot;limelight&quot;</span>};</div>
 <div class="line">camera</div>
 <div class="line">    .<a class="code hl_function" href="classlimelight_1_1Limelight.html#ad2698247a7fae9ecd672b1f02330f98f">WithPoseEstimateConfig_MT1</a>(<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a8b47b8dc57a1e03c21b0775921e0cc35">PoseEstimateConfig::DefaultMT1</a>()</div>
 <div class="line">        .<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a40d1651ff73a71a1de01f43d957da378">WithMinTagCount</a>(2)</div>
-<div class="line">        .<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a9ac01e79c42af99037786567793f28e4">WithFieldBounds</a>(17.55, 8.05))</div>
+<div class="line">        .<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a9a063b5ba346ea5e5aec34d77e6dc9d0">WithFieldBounds</a>(17.55_m, 8.05_m))</div>
 <div class="line">    .<a class="code hl_function" href="classlimelight_1_1Limelight.html#aa665b6ab7b508b39123f88298c69fed6">WithPoseEstimateConfig_MT2</a>(<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a2e343ed1278bec75cae220e6cd2037cd">PoseEstimateConfig::DefaultMT2</a>()</div>
-<div class="line">        .<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a51eec66e6a1250fabf0fface329c338d">WithMaxAvgTagDistance</a>(4.0)</div>
-<div class="line">        .<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a9ac01e79c42af99037786567793f28e4">WithFieldBounds</a>(17.55, 8.05));</div>
-<div class="ttc" id="aclasslimelight_1_1Limelight_html"><div class="ttname"><a href="classlimelight_1_1Limelight.html">limelight::Limelight</a></div><div class="ttdef"><b>Definition</b> Limelight.h:2607</div></div>
-<div class="ttc" id="aclasslimelight_1_1Limelight_html_aa665b6ab7b508b39123f88298c69fed6"><div class="ttname"><a href="classlimelight_1_1Limelight.html#aa665b6ab7b508b39123f88298c69fed6">limelight::Limelight::WithPoseEstimateConfig_MT2</a></div><div class="ttdeci">Limelight &amp; WithPoseEstimateConfig_MT2(const PoseEstimateConfig &amp;config) &amp;</div><div class="ttdoc">Configures filtering and fusion standard deviations for every MegaTag2 pose estimate.</div><div class="ttdef"><b>Definition</b> Limelight.h:2786</div></div>
-<div class="ttc" id="aclasslimelight_1_1Limelight_html_ad2698247a7fae9ecd672b1f02330f98f"><div class="ttname"><a href="classlimelight_1_1Limelight.html#ad2698247a7fae9ecd672b1f02330f98f">limelight::Limelight::WithPoseEstimateConfig_MT1</a></div><div class="ttdeci">Limelight &amp; WithPoseEstimateConfig_MT1(const PoseEstimateConfig &amp;config) &amp;</div><div class="ttdoc">Configures filtering and fusion standard deviations for every MegaTag1 pose estimate.</div><div class="ttdef"><b>Definition</b> Limelight.h:2768</div></div>
-<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html">limelight::PoseEstimateConfig</a></div><div class="ttdoc">A reusable configuration object for rejection filters and standard deviation scaling.</div><div class="ttdef"><b>Definition</b> Limelight.h:852</div></div>
-<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a2e343ed1278bec75cae220e6cd2037cd"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a2e343ed1278bec75cae220e6cd2037cd">limelight::PoseEstimateConfig::DefaultMT2</a></div><div class="ttdeci">static PoseEstimateConfig DefaultMT2()</div><div class="ttdoc">The MegaTag2 defaults.</div><div class="ttdef"><b>Definition</b> Limelight.h:1009</div></div>
-<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a40d1651ff73a71a1de01f43d957da378"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a40d1651ff73a71a1de01f43d957da378">limelight::PoseEstimateConfig::WithMinTagCount</a></div><div class="ttdeci">PoseEstimateConfig &amp; WithMinTagCount(int minTagCount)</div><div class="ttdoc">Requires at least this many contributing tags.</div><div class="ttdef"><b>Definition</b> Limelight.h:903</div></div>
-<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a51eec66e6a1250fabf0fface329c338d"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a51eec66e6a1250fabf0fface329c338d">limelight::PoseEstimateConfig::WithMaxAvgTagDistance</a></div><div class="ttdeci">PoseEstimateConfig &amp; WithMaxAvgTagDistance(double maxAvgTagDistanceMeters)</div><div class="ttdoc">Rejects estimates when the average tag distance is above this value in meters.</div><div class="ttdef"><b>Definition</b> Limelight.h:934</div></div>
-<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a8b47b8dc57a1e03c21b0775921e0cc35"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a8b47b8dc57a1e03c21b0775921e0cc35">limelight::PoseEstimateConfig::DefaultMT1</a></div><div class="ttdeci">static PoseEstimateConfig DefaultMT1()</div><div class="ttdoc">The MegaTag1 defaults.</div><div class="ttdef"><b>Definition</b> Limelight.h:993</div></div>
-<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a9ac01e79c42af99037786567793f28e4"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a9ac01e79c42af99037786567793f28e4">limelight::PoseEstimateConfig::WithFieldBounds</a></div><div class="ttdeci">PoseEstimateConfig &amp; WithFieldBounds(double fieldLengthMeters, double fieldWidthMeters)</div><div class="ttdoc">Rejects estimates outside the field.</div><div class="ttdef"><b>Definition</b> Limelight.h:957</div></div>
+<div class="line">        .<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#ada61f8ae45b1a0da2aa55f33059336f0">WithMaxAvgTagDistance</a>(4_m)</div>
+<div class="line">        .<a class="code hl_function" href="classlimelight_1_1PoseEstimateConfig.html#a9a063b5ba346ea5e5aec34d77e6dc9d0">WithFieldBounds</a>(17.55_m, 8.05_m));</div>
+<div class="ttc" id="aclasslimelight_1_1Limelight_html"><div class="ttname"><a href="classlimelight_1_1Limelight.html">limelight::Limelight</a></div><div class="ttdef"><b>Definition</b> limelight/Limelight.h:215</div></div>
+<div class="ttc" id="aclasslimelight_1_1Limelight_html_aa665b6ab7b508b39123f88298c69fed6"><div class="ttname"><a href="classlimelight_1_1Limelight.html#aa665b6ab7b508b39123f88298c69fed6">limelight::Limelight::WithPoseEstimateConfig_MT2</a></div><div class="ttdeci">Limelight &amp; WithPoseEstimateConfig_MT2(const PoseEstimateConfig &amp;config) &amp;</div><div class="ttdoc">Configures filtering and fusion standard deviations for every MegaTag2 pose estimate.</div><div class="ttdef"><b>Definition</b> limelight/Limelight.h:390</div></div>
+<div class="ttc" id="aclasslimelight_1_1Limelight_html_ad2698247a7fae9ecd672b1f02330f98f"><div class="ttname"><a href="classlimelight_1_1Limelight.html#ad2698247a7fae9ecd672b1f02330f98f">limelight::Limelight::WithPoseEstimateConfig_MT1</a></div><div class="ttdeci">Limelight &amp; WithPoseEstimateConfig_MT1(const PoseEstimateConfig &amp;config) &amp;</div><div class="ttdoc">Configures filtering and fusion standard deviations for every MegaTag1 pose estimate.</div><div class="ttdef"><b>Definition</b> limelight/Limelight.h:372</div></div>
+<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html">limelight::PoseEstimateConfig</a></div><div class="ttdoc">A reusable configuration object for rejection filters and standard deviation scaling.</div><div class="ttdef"><b>Definition</b> PoseEstimateConfig.h:50</div></div>
+<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a2e343ed1278bec75cae220e6cd2037cd"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a2e343ed1278bec75cae220e6cd2037cd">limelight::PoseEstimateConfig::DefaultMT2</a></div><div class="ttdeci">static PoseEstimateConfig DefaultMT2()</div><div class="ttdoc">The MegaTag2 defaults.</div><div class="ttdef"><b>Definition</b> PoseEstimateConfig.h:208</div></div>
+<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a40d1651ff73a71a1de01f43d957da378"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a40d1651ff73a71a1de01f43d957da378">limelight::PoseEstimateConfig::WithMinTagCount</a></div><div class="ttdeci">PoseEstimateConfig &amp; WithMinTagCount(int minTagCount)</div><div class="ttdoc">Requires at least this many contributing tags.</div><div class="ttdef"><b>Definition</b> PoseEstimateConfig.h:101</div></div>
+<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a8b47b8dc57a1e03c21b0775921e0cc35"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a8b47b8dc57a1e03c21b0775921e0cc35">limelight::PoseEstimateConfig::DefaultMT1</a></div><div class="ttdeci">static PoseEstimateConfig DefaultMT1()</div><div class="ttdoc">The MegaTag1 defaults.</div><div class="ttdef"><b>Definition</b> PoseEstimateConfig.h:192</div></div>
+<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_a9a063b5ba346ea5e5aec34d77e6dc9d0"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#a9a063b5ba346ea5e5aec34d77e6dc9d0">limelight::PoseEstimateConfig::WithFieldBounds</a></div><div class="ttdeci">PoseEstimateConfig &amp; WithFieldBounds(wpi::units::meter_t fieldLength, wpi::units::meter_t fieldWidth)</div><div class="ttdoc">Rejects estimates outside the field.</div><div class="ttdef"><b>Definition</b> PoseEstimateConfig.h:156</div></div>
+<div class="ttc" id="aclasslimelight_1_1PoseEstimateConfig_html_ada61f8ae45b1a0da2aa55f33059336f0"><div class="ttname"><a href="classlimelight_1_1PoseEstimateConfig.html#ada61f8ae45b1a0da2aa55f33059336f0">limelight::PoseEstimateConfig::WithMaxAvgTagDistance</a></div><div class="ttdeci">PoseEstimateConfig &amp; WithMaxAvgTagDistance(wpi::units::meter_t maxAvgTagDistance)</div><div class="ttdoc">Rejects estimates when the average tag distance is above this value in meters.</div><div class="ttdef"><b>Definition</b> PoseEstimateConfig.h:132</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a40d1651ff73a71a1de01f43d957da378" name="a40d1651ff73a71a1de01f43d957da378"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40d1651ff73a71a1de01f43d957da378">&#9670;&#160;</a></span>WithMinTagCount()</h2>
@@ -296,8 +297,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a6cc21f7c4f167cb68b141488ebd81c19" name="a6cc21f7c4f167cb68b141488ebd81c19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cc21f7c4f167cb68b141488ebd81c19">&#9670;&#160;</a></span>WithMaxSingleTagDistance()</h2>
+<a id="ad771a6d289bd3cbcfe8a92f78fa4df29" name="ad771a6d289bd3cbcfe8a92f78fa4df29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad771a6d289bd3cbcfe8a92f78fa4df29">&#9670;&#160;</a></span>WithMaxSingleTagDistance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,8 +309,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithMaxSingleTagDistance </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>maxSingleTagDistanceMeters</em></td><td>)</td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>maxSingleTagDistance</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -321,12 +322,12 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Rejects single-tag estimates when the tag is farther than this distance in meters. </p>
-<p>Single-tag estimates lose accuracy with distance faster than multi-tag estimates. Set this value tighter than <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#a51eec66e6a1250fabf0fface329c338d" title="Rejects estimates when the average tag distance is above this value in meters.">WithMaxAvgTagDistance()</a>. For example, allow multi-tag estimates to 6 m and single-tag estimates to 2.5 m. Applies only when exactly one tag contributes. 0 disables this check. </p>
+<p>Single-tag estimates lose accuracy with distance faster than multi-tag estimates. Set this value tighter than <a class="el" href="classlimelight_1_1PoseEstimateConfig.html#ada61f8ae45b1a0da2aa55f33059336f0" title="Rejects estimates when the average tag distance is above this value in meters.">WithMaxAvgTagDistance()</a>. For example, allow multi-tag estimates to 6 m and single-tag estimates to 2.5 m. Applies only when exactly one tag contributes. 0 disables this check. </p>
 
 </div>
 </div>
-<a id="a51eec66e6a1250fabf0fface329c338d" name="a51eec66e6a1250fabf0fface329c338d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51eec66e6a1250fabf0fface329c338d">&#9670;&#160;</a></span>WithMaxAvgTagDistance()</h2>
+<a id="ada61f8ae45b1a0da2aa55f33059336f0" name="ada61f8ae45b1a0da2aa55f33059336f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada61f8ae45b1a0da2aa55f33059336f0">&#9670;&#160;</a></span>WithMaxAvgTagDistance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,8 +338,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithMaxAvgTagDistance </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>maxAvgTagDistanceMeters</em></td><td>)</td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>maxAvgTagDistance</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -383,8 +384,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9ac01e79c42af99037786567793f28e4" name="a9ac01e79c42af99037786567793f28e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ac01e79c42af99037786567793f28e4">&#9670;&#160;</a></span>WithFieldBounds()</h2>
+<a id="a9a063b5ba346ea5e5aec34d77e6dc9d0" name="a9a063b5ba346ea5e5aec34d77e6dc9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a063b5ba346ea5e5aec34d77e6dc9d0">&#9670;&#160;</a></span>WithFieldBounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,14 +396,14 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithFieldBounds </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>fieldLengthMeters</em>, </td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>fieldLength</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>fieldWidthMeters</em>&#160;</td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>fieldWidth</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -422,16 +423,16 @@ Friends</h2></td></tr>
 <p>A zero length or width disables this check.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fieldLengthMeters</td><td>Field length (x extent) in meters </td></tr>
-    <tr><td class="paramname">fieldWidthMeters</td><td>Field width (y extent) in meters </td></tr>
+    <tr><td class="paramname">fieldLength</td><td>Field length (x extent) in meters </td></tr>
+    <tr><td class="paramname">fieldWidth</td><td>Field width (y extent) in meters </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a6849e9146befea76151c33a7bffeec20" name="a6849e9146befea76151c33a7bffeec20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6849e9146befea76151c33a7bffeec20">&#9670;&#160;</a></span>WithFieldBoundsMargin()</h2>
+<a id="ae374c65e8e322a6a518d7a46e7f38a0b" name="ae374c65e8e322a6a518d7a46e7f38a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae374c65e8e322a6a518d7a46e7f38a0b">&#9670;&#160;</a></span>WithFieldBoundsMargin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,8 +443,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithFieldBoundsMargin </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>marginMeters</em></td><td>)</td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>margin</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -458,7 +459,7 @@ Friends</h2></td></tr>
 <p>The default is 0.5. A positive margin accepts poses up to that distance outside the field. This allows small localization errors at the walls. A negative margin requires poses at least that distance inside the field walls.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">marginMeters</td><td>Margin in meters. Negative values are an inset. NaN becomes 0. Infinite values clamp to the largest finite margin </td></tr>
+    <tr><td class="paramname">margin</td><td>Margin in meters. Negative values are an inset. NaN becomes 0. Infinite values clamp to the largest finite margin </td></tr>
   </table>
   </dd>
 </dl>
@@ -544,13 +545,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Accepts every structurally valid pose. </p>
+<p>Accepts every estimate that decoded with a pose and a timestamp. </p>
 <p>Uses a fixed 0.5 m XY standard deviation. Heading is untrusted. </p>
 
 </div>
 </div>
-<a id="a4337c6367004f245a53ebd15c3cba9bd" name="a4337c6367004f245a53ebd15c3cba9bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4337c6367004f245a53ebd15c3cba9bd">&#9670;&#160;</a></span>NoFiltering() <span class="overload">[2/2]</span></h2>
+<a id="af03a2c2506e59f026caea67e7ee10fab" name="af03a2c2506e59f026caea67e7ee10fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03a2c2506e59f026caea67e7ee10fab">&#9670;&#160;</a></span>NoFiltering() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,14 +562,14 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> limelight::PoseEstimateConfig::NoFiltering </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>xyStdDevMeters</em>, </td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>xyStdDev</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>thetaStdDevRadians</em>&#160;</td>
+          <td class="paramtype">wpi::units::radian_t&#160;</td>
+          <td class="paramname"><em>thetaStdDev</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -583,20 +584,20 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Accepts every structurally valid pose. </p>
+<p>Accepts every estimate that decoded with a pose and a timestamp. </p>
 <p>Uses the fixed standard deviations that you select.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">xyStdDevMeters</td><td>Fixed XY standard deviation in meters </td></tr>
-    <tr><td class="paramname">thetaStdDevRadians</td><td>Fixed heading standard deviation in radians. Pass UNTRUSTED to exclude vision heading from fusion </td></tr>
+    <tr><td class="paramname">xyStdDev</td><td>Fixed XY standard deviation in meters </td></tr>
+    <tr><td class="paramname">thetaStdDev</td><td>Fixed heading standard deviation in radians. Pass UNTRUSTED to exclude vision heading from fusion </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a6314dc14347525c70dda33898d6cd011" name="a6314dc14347525c70dda33898d6cd011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6314dc14347525c70dda33898d6cd011">&#9670;&#160;</a></span>WithStdDevXY() <span class="overload">[1/2]</span></h2>
+<a id="ad222c85dc4e6398728a93842ed85bf93" name="ad222c85dc4e6398728a93842ed85bf93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad222c85dc4e6398728a93842ed85bf93">&#9670;&#160;</a></span>WithStdDevXY() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -607,8 +608,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithStdDevXY </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>baseMeters</em></td><td>)</td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -624,8 +625,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a41dcfad614f016cda453f1858c5d1de5" name="a41dcfad614f016cda453f1858c5d1de5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41dcfad614f016cda453f1858c5d1de5">&#9670;&#160;</a></span>WithStdDevXY() <span class="overload">[2/2]</span></h2>
+<a id="a0828e9d6522e948491926e39f1036972" name="a0828e9d6522e948491926e39f1036972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0828e9d6522e948491926e39f1036972">&#9670;&#160;</a></span>WithStdDevXY() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -636,20 +637,20 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithStdDevXY </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>baseMeters</em>, </td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>minMeters</em>, </td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>maxMeters</em>&#160;</td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -669,8 +670,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a4846bd61c14808c5e282863c08e37a1f" name="a4846bd61c14808c5e282863c08e37a1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4846bd61c14808c5e282863c08e37a1f">&#9670;&#160;</a></span>WithStdDevTheta() <span class="overload">[1/2]</span></h2>
+<a id="a110983417b3e2a623b657d3809f4ab98" name="a110983417b3e2a623b657d3809f4ab98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110983417b3e2a623b657d3809f4ab98">&#9670;&#160;</a></span>WithStdDevTheta() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -681,8 +682,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithStdDevTheta </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>baseRadians</em></td><td>)</td>
+          <td class="paramtype">wpi::units::radian_t&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -698,8 +699,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af75baf17bf47d907bf9c623b38793985" name="af75baf17bf47d907bf9c623b38793985"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af75baf17bf47d907bf9c623b38793985">&#9670;&#160;</a></span>WithStdDevTheta() <span class="overload">[2/2]</span></h2>
+<a id="a7e0423c0c4aa39d1b1a358668caf1b69" name="a7e0423c0c4aa39d1b1a358668caf1b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0423c0c4aa39d1b1a358668caf1b69">&#9670;&#160;</a></span>WithStdDevTheta() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -710,20 +711,20 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classlimelight_1_1PoseEstimateConfig.html">PoseEstimateConfig</a> &amp; limelight::PoseEstimateConfig::WithStdDevTheta </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>baseRadians</em>, </td>
+          <td class="paramtype">wpi::units::radian_t&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>minRadians</em>, </td>
+          <td class="paramtype">wpi::units::radian_t&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>maxRadians</em>&#160;</td>
+          <td class="paramtype">wpi::units::radian_t&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -772,8 +773,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="afb56f5c10187b4ace9d92774feb1fbdc" name="afb56f5c10187b4ace9d92774feb1fbdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb56f5c10187b4ace9d92774feb1fbdc">&#9670;&#160;</a></span>WithStdDevDistanceScaling() <span class="overload">[2/2]</span></h2>
+<a id="a49b149bc23088f4fe3f55bfe2d76945e" name="a49b149bc23088f4fe3f55bfe2d76945e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b149bc23088f4fe3f55bfe2d76945e">&#9670;&#160;</a></span>WithStdDevDistanceScaling() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -790,14 +791,14 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>minMeters</em>, </td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>maxMeters</em>&#160;</td>
+          <td class="paramtype">wpi::units::meter_t&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1210,8 +1211,9 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="Limelight_8h.html">Limelight.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="PoseEstimateConfig_8h.html">PoseEstimateConfig.h</a></li>
+<li><a class="el" href="PoseEstimate_8h.html">PoseEstimate.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -11,17 +11,21 @@ modify the library or cannot use vendordeps.
 
 ## Java
 
-Copy `Limelight.java` into your robot project as
-`src/main/java/first/Limelight.java`. It declares `package first;`, so import it
-with `import first.Limelight;`. Change the package line if you move it.
+Copy the `java/` folder into your robot project as
+`src/main/java/com/limelightvision/`. The files declare
+`package com.limelightvision;`, one public type per file, so import them with
+`import com.limelightvision.Limelight;` and so on. Change the package line in
+every file if you move them.
 
 ## C++
 
-Copy `Limelight.h` into your robot project as `src/main/include/Limelight.h`
-and `#include "Limelight.h"`. The library is header-only and lives in the
-`limelight` namespace.
+Copy the contents of the `cpp/` folder into your robot project's
+`src/main/include/` so you have `src/main/include/Limelight.h` and
+`src/main/include/limelight/`. Then `#include "limelight/Limelight.h"` (the
+top-level `Limelight.h` is a one-line shim that does the same). The library is
+header-only, one type per header, in the `limelight` namespace.
 
 ## Requirements
 
 Limelight OS 2027.0 or later, or Systemcore OS with built-in vision. Java 25 or
-C++23. Both files are MIT licensed; see `LICENSE` in this folder.
+C++23. All files are MIT licensed; see `LICENSE` in this folder.

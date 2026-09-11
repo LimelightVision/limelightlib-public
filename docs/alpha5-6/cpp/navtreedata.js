@@ -53,10 +53,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Limelight_8h.html",
-"classlimelight_1_1LimelightResults.html#a3edfb44db6df8188fed39c5e1bde0578",
-"namespacelimelight.html#a6186f01ca1ee794b48b2d14506c1e777a54105bddbfe3f639d49cbe8f5182c958",
-"structlimelight_1_1RewindData.html#a74a39d75a08c26bf475336db91b35095"
+"BarcodeTarget_8h.html",
+"classlimelight_1_1Limelight.html#ae84daaf612cf5dec9a8731876889c114",
+"functions_p.html",
+"structlimelight_1_1OCRTarget.html#a9430b2503f60f89bee12e520adc3ffd5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta8-alpha5-6</span>
+   <div id="projectname">LimelightLib 2<span id="projectnumber">&#160;2.0.0-beta9-alpha5-6</span>
    </div>
    <div id="projectbrief">Limelight interface for WPILib C++ projects</div>
   </td>
@@ -97,22 +97,22 @@ $(document).ready(function(){initNavTree('structlimelight_1_1CameraIntrinsics.ht
 </div><!--header-->
 <div class="contents">
 
-<p>Live camera intrinsics for the running pipeline.  
+<p>The active camera intrinsics, scaled to the current processing resolution.  
  <a href="structlimelight_1_1CameraIntrinsics.html#details">More...</a></p>
 
-<p><code>#include &lt;Limelight.h&gt;</code></p>
+<p><code>#include &lt;CameraIntrinsics.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7d2c40d3b19c2be9066a96ceebf80768" id="r_a7d2c40d3b19c2be9066a96ceebf80768"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1CameraIntrinsics.html#a7d2c40d3b19c2be9066a96ceebf80768">customCalibration</a> = false</td></tr>
 <tr class="memdesc:a7d2c40d3b19c2be9066a96ceebf80768"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when the camera uses a user-uploaded calibration file.  <br /></td></tr>
 <tr class="separator:a7d2c40d3b19c2be9066a96ceebf80768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade16ec78663126131e4aeaf8768b184c" id="r_ade16ec78663126131e4aeaf8768b184c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1CameraIntrinsics.html#ade16ec78663126131e4aeaf8768b184c">hfovDegrees</a> = 0</td></tr>
-<tr class="memdesc:ade16ec78663126131e4aeaf8768b184c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal field of view in degrees.  <br /></td></tr>
-<tr class="separator:ade16ec78663126131e4aeaf8768b184c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aea43f0772cdad82d5b8c63838dd64a" id="r_a3aea43f0772cdad82d5b8c63838dd64a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1CameraIntrinsics.html#a3aea43f0772cdad82d5b8c63838dd64a">vfovDegrees</a> = 0</td></tr>
-<tr class="memdesc:a3aea43f0772cdad82d5b8c63838dd64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertical field of view in degrees.  <br /></td></tr>
-<tr class="separator:a3aea43f0772cdad82d5b8c63838dd64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad217c451ceb68ad045f553399e054e2b" id="r_ad217c451ceb68ad045f553399e054e2b"><td class="memItemLeft" align="right" valign="top">wpi::units::degree_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1CameraIntrinsics.html#ad217c451ceb68ad045f553399e054e2b">hfov</a> {0.0}</td></tr>
+<tr class="memdesc:ad217c451ceb68ad045f553399e054e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal field of view in degrees.  <br /></td></tr>
+<tr class="separator:ad217c451ceb68ad045f553399e054e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0495cd2f934a68f05091218333a811" id="r_a4c0495cd2f934a68f05091218333a811"><td class="memItemLeft" align="right" valign="top">wpi::units::degree_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1CameraIntrinsics.html#a4c0495cd2f934a68f05091218333a811">vfov</a> {0.0}</td></tr>
+<tr class="memdesc:a4c0495cd2f934a68f05091218333a811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertical field of view in degrees.  <br /></td></tr>
+<tr class="separator:a4c0495cd2f934a68f05091218333a811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a457172a5be0317a16c2e068117658d18" id="r_a457172a5be0317a16c2e068117658d18"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlimelight_1_1CameraIntrinsics.html#a457172a5be0317a16c2e068117658d18">resolutionWidthPixels</a> = 0</td></tr>
 <tr class="memdesc:a457172a5be0317a16c2e068117658d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing-resolution width in pixels.  <br /></td></tr>
 <tr class="separator:a457172a5be0317a16c2e068117658d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,8 +127,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a75da68f71013d2d105fdaec8a9796722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Live camera intrinsics for the running pipeline. </p>
-<p>The camera matrix is scaled to the current processing resolution. </p>
+<div class="textblock"><p>The active camera intrinsics, scaled to the current processing resolution. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a7d2c40d3b19c2be9066a96ceebf80768" name="a7d2c40d3b19c2be9066a96ceebf80768"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d2c40d3b19c2be9066a96ceebf80768">&#9670;&#160;</a></span>customCalibration</h2>
@@ -147,14 +146,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ade16ec78663126131e4aeaf8768b184c" name="ade16ec78663126131e4aeaf8768b184c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade16ec78663126131e4aeaf8768b184c">&#9670;&#160;</a></span>hfovDegrees</h2>
+<a id="ad217c451ceb68ad045f553399e054e2b" name="ad217c451ceb68ad045f553399e054e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad217c451ceb68ad045f553399e054e2b">&#9670;&#160;</a></span>hfov</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double limelight::CameraIntrinsics::hfovDegrees = 0</td>
+          <td class="memname">wpi::units::degree_t limelight::CameraIntrinsics::hfov {0.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -163,14 +162,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3aea43f0772cdad82d5b8c63838dd64a" name="a3aea43f0772cdad82d5b8c63838dd64a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aea43f0772cdad82d5b8c63838dd64a">&#9670;&#160;</a></span>vfovDegrees</h2>
+<a id="a4c0495cd2f934a68f05091218333a811" name="a4c0495cd2f934a68f05091218333a811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c0495cd2f934a68f05091218333a811">&#9670;&#160;</a></span>vfov</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double limelight::CameraIntrinsics::vfovDegrees = 0</td>
+          <td class="memname">wpi::units::degree_t limelight::CameraIntrinsics::vfov {0.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -247,7 +246,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="Limelight_8h.html">Limelight.h</a></li>
+<li><a class="el" href="CameraIntrinsics_8h.html">CameraIntrinsics.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

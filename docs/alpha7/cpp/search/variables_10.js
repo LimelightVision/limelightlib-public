@@ -3,7 +3,7 @@ var searchData=
   ['ramusagepercent_0',['ramUsagePercent',['../structlimelight_1_1HardwareData.html#abf209064470762200def58fc47edfcb8',1,'limelight::HardwareData']]],
   ['ratepermin_1',['ratePerMin',['../structlimelight_1_1OCRTarget.html#a808291c79986c62b18f1b1e09fba5ecf',1,'limelight::OCRTarget']]],
   ['rawfiducials_2',['rawFiducials',['../classlimelight_1_1PoseEstimate.html#a5507ba70edf352873bcb5c20c2ae807c',1,'limelight::PoseEstimate']]],
-  ['receivetimestampseconds_3',['receiveTimestampSeconds',['../classlimelight_1_1LimelightResults.html#abb80f5116f0ff8b1c4b79d9cc821ac58',1,'limelight::LimelightResults']]],
+  ['receivetimestamp_3',['receiveTimestamp',['../classlimelight_1_1LimelightResults.html#aab097e807c1ff43ef3728efbbae5d41f',1,'limelight::LimelightResults']]],
   ['regionid_4',['regionId',['../structlimelight_1_1OCRTarget.html#a3737127d7f02fbf3b2cd4ad6d577f540',1,'limelight::OCRTarget']]],
   ['reject_5fambiguity_5',['REJECT_AMBIGUITY',['../classlimelight_1_1PoseEstimateConfig.html#a07a1bf94d2afba41ec5ddd234e1b85b8',1,'limelight::PoseEstimateConfig']]],
   ['reject_5fbad_5fmetadata_6',['REJECT_BAD_METADATA',['../classlimelight_1_1PoseEstimateConfig.html#a8d4b6bb499bedce680294f78db42dd1e',1,'limelight::PoseEstimateConfig']]],
@@ -24,7 +24,7 @@ var searchData=
   ['retrotargets_21',['retroTargets',['../classlimelight_1_1LimelightResults.html#ac7f0969ece1218b277f3712c054ea812',1,'limelight::LimelightResults']]],
   ['rewind_22',['rewind',['../classlimelight_1_1LimelightResults.html#adda4609acb9b48352457f4fd8be44917',1,'limelight::LimelightResults']]],
   ['robotorientation_23',['robotOrientation',['../classlimelight_1_1LimelightResults.html#acec7a09004bb34f1a82ae25fb4835a42',1,'limelight::LimelightResults']]],
-  ['robotposefieldspace_24',['robotposefieldspace',['../structlimelight_1_1RetroTarget.html#a78374620237aa3964c5ed997017b5737',1,'limelight::RetroTarget::robotPoseFieldSpace'],['../structlimelight_1_1FiducialTarget.html#ade853cc07706b2f075c9a167b0a46184',1,'limelight::FiducialTarget::robotPoseFieldSpace']]],
+  ['robotposefieldspace_24',['robotposefieldspace',['../structlimelight_1_1FiducialTarget.html#ade853cc07706b2f075c9a167b0a46184',1,'limelight::FiducialTarget::robotPoseFieldSpace'],['../structlimelight_1_1RetroTarget.html#a78374620237aa3964c5ed997017b5737',1,'limelight::RetroTarget::robotPoseFieldSpace']]],
   ['robotposefieldspacemt2_25',['robotPoseFieldSpaceMT2',['../structlimelight_1_1FiducialTarget.html#ad176c3fb6034330319b077375f03c392',1,'limelight::FiducialTarget']]],
   ['robotposemt1_26',['robotPoseMT1',['../classlimelight_1_1LimelightResults.html#a27d403a9ac5b11a9ec00548ba422c70c',1,'limelight::LimelightResults']]],
   ['robotposemt1wpiblue_27',['robotPoseMT1WpiBlue',['../classlimelight_1_1LimelightResults.html#a61500cf98d96e3fc0754286b616dda78',1,'limelight::LimelightResults']]],
@@ -32,7 +32,7 @@ var searchData=
   ['robotposemt2_29',['robotPoseMT2',['../classlimelight_1_1LimelightResults.html#a03619d22fe266bf586b255ec055bc972',1,'limelight::LimelightResults']]],
   ['robotposemt2wpiblue_30',['robotPoseMT2WpiBlue',['../classlimelight_1_1LimelightResults.html#acfc7b95efb4f126574a1d7e0e5b5b77e',1,'limelight::LimelightResults']]],
   ['robotposemt2wpired_31',['robotPoseMT2WpiRed',['../classlimelight_1_1LimelightResults.html#acc2c55b1f54964284fbc1824de910662',1,'limelight::LimelightResults']]],
-  ['robotposetargetspace_32',['robotposetargetspace',['../structlimelight_1_1RetroTarget.html#aae00cfd837c6d32a88e2cfe3a86dbbac',1,'limelight::RetroTarget::robotPoseTargetSpace'],['../structlimelight_1_1FiducialTarget.html#ab930c4a792db513c3e03d0bd0ab5a8b2',1,'limelight::FiducialTarget::robotPoseTargetSpace']]],
-  ['robotyawdegrees_33',['robotYawDegrees',['../structlimelight_1_1IMUData.html#a88de3ab5718d5985c0d4715ad227a97b',1,'limelight::IMUData']]],
-  ['rolldegrees_34',['rollDegrees',['../structlimelight_1_1IMUData.html#afc4208949eb725f42beed9344c1c3440',1,'limelight::IMUData']]]
+  ['robotposetargetspace_32',['robotposetargetspace',['../structlimelight_1_1FiducialTarget.html#ab930c4a792db513c3e03d0bd0ab5a8b2',1,'limelight::FiducialTarget::robotPoseTargetSpace'],['../structlimelight_1_1RetroTarget.html#aae00cfd837c6d32a88e2cfe3a86dbbac',1,'limelight::RetroTarget::robotPoseTargetSpace']]],
+  ['robotyaw_33',['robotYaw',['../structlimelight_1_1IMUData.html#a64395357f3c01a79d4d440c186055c5c',1,'limelight::IMUData']]],
+  ['roll_34',['roll',['../structlimelight_1_1IMUData.html#aa2ce4e6802681e07a9e830a8e60065c2',1,'limelight::IMUData']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['limelight_2eh_0',['Limelight.h',['../Limelight_8h.html',1,'']]]
+  ['barcodetarget_2eh_0',['BarcodeTarget.h',['../BarcodeTarget_8h.html',1,'']]]
 ];

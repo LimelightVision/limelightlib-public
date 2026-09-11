@@ -1,7 +1,24 @@
 var searchData=
 [
-  ['readacceptedposeestimates_0',['ReadAcceptedPoseEstimates',['../classlimelight_1_1Limelight.html#a7ca72daf5fa65c6219f03a2c5d805ad7',1,'limelight::Limelight']]],
-  ['readposeestimatequeue_1',['ReadPoseEstimateQueue',['../classlimelight_1_1Limelight.html#ad8e09796c81c4132f11dc98faccb064a',1,'limelight::Limelight']]],
-  ['readrawframequeue_2',['ReadRawFrameQueue',['../classlimelight_1_1Limelight.html#acf9c47850deae35e32802ee6829d2c4b',1,'limelight::Limelight']]],
-  ['readresultsqueue_3',['ReadResultsQueue',['../classlimelight_1_1Limelight.html#a391ca872e8136b71c46dbc94f747523f',1,'limelight::Limelight']]]
+  ['setcamerapose_5frobotspaceoverride_0',['setcamerapose_robotspaceoverride',['../classlimelight_1_1Limelight.html#afc749b50fbeaa23106e978259a5f6a08',1,'limelight::Limelight::SetCameraPose_RobotSpaceOverride(const wpi::math::Pose3d &amp;cameraPoseRobotSpace, bool flush)'],['../classlimelight_1_1Limelight.html#a23104b116ec1e9ce009ad9fb1e3579be',1,'limelight::Limelight::SetCameraPose_RobotSpaceOverride(wpi::units::meter_t forward, wpi::units::meter_t left, wpi::units::meter_t up, wpi::units::degree_t roll, wpi::units::degree_t pitch, wpi::units::degree_t yaw, bool flush)']]],
+  ['setcropwindowoverride_1',['SetCropWindowOverride',['../classlimelight_1_1Limelight.html#ad048774edc5654e475ab8240c404f735',1,'limelight::Limelight']]],
+  ['setfiducial3doffsetoverride_2',['setfiducial3doffsetoverride',['../classlimelight_1_1Limelight.html#af2ab15585b7b33596c4b194efb7146c5',1,'limelight::Limelight::SetFiducial3DOffsetOverride(wpi::units::meter_t forward, wpi::units::meter_t left, wpi::units::meter_t up)'],['../classlimelight_1_1Limelight.html#ac28395248d05168e69d7de3dea04bc19',1,'limelight::Limelight::SetFiducial3DOffsetOverride(const wpi::math::Translation3d &amp;offset)']]],
+  ['setfiducialdownscalingoverride_3',['SetFiducialDownscalingOverride',['../classlimelight_1_1Limelight.html#abad7f1ff795085ffe93c5baa2dd1cdd4',1,'limelight::Limelight']]],
+  ['setfiducialidfiltersoverride_4',['SetFiducialIDFiltersOverride',['../classlimelight_1_1Limelight.html#a1e29eac65500776c472ac7daff7182ed',1,'limelight::Limelight']]],
+  ['setimuassistalpha_5',['SetIMUAssistAlpha',['../classlimelight_1_1Limelight.html#aa765cc646f4ce6679b2b251f5568058c',1,'limelight::Limelight']]],
+  ['setimumode_6',['SetIMUMode',['../classlimelight_1_1Limelight.html#a00af3be2fd6e2acf2be73d277d7682e0',1,'limelight::Limelight']]],
+  ['setkeystoneoverride_7',['SetKeystoneOverride',['../classlimelight_1_1Limelight.html#ab863b7e22fd19f0fe0e5365a04e708ba',1,'limelight::Limelight']]],
+  ['setledmode_8',['SetLEDMode',['../classlimelight_1_1Limelight.html#a09f37119bc795baf873a384486d09906',1,'limelight::Limelight']]],
+  ['setpipelineconfigurationoverride_9',['SetPipelineConfigurationOverride',['../classlimelight_1_1Limelight.html#aa72e551670a1abc1a2f2093c79842efe',1,'limelight::Limelight']]],
+  ['setpipelineindex_10',['SetPipelineIndex',['../classlimelight_1_1Limelight.html#a8be6d621c6ff99eafd69d91b672cf8d3',1,'limelight::Limelight']]],
+  ['setprioritytagidoverride_11',['SetPriorityTagIDOverride',['../classlimelight_1_1Limelight.html#a22b017e31622d322c979af969fa3a17e',1,'limelight::Limelight']]],
+  ['setpythonscriptdata_12',['SetPythonScriptData',['../classlimelight_1_1Limelight.html#a964ea01ce390206113800f3046646045',1,'limelight::Limelight']]],
+  ['setrewindenabled_13',['SetRewindEnabled',['../classlimelight_1_1Limelight.html#a21dad72242f4e6c81c4659855b378104',1,'limelight::Limelight']]],
+  ['setrobotorientation_14',['setrobotorientation',['../classlimelight_1_1Limelight.html#abb63822f656d40bf783466de6922493d',1,'limelight::Limelight::SetRobotOrientation(wpi::units::degree_t yaw, bool flush)'],['../classlimelight_1_1Limelight.html#a98a36caf4bd903a05097edddeab17eb8',1,'limelight::Limelight::SetRobotOrientation(wpi::units::degree_t yaw, wpi::units::degrees_per_second_t yawRate, wpi::units::degree_t pitch, wpi::units::degrees_per_second_t pitchRate, wpi::units::degree_t roll, wpi::units::degrees_per_second_t rollRate, bool flush)']]],
+  ['setsharedmap_15',['SetSharedMap',['../classlimelight_1_1Limelight.html#a970e4410d388ae0c0b6267accf32432e',1,'limelight::Limelight']]],
+  ['setsharedrobotorientation_16',['setsharedrobotorientation',['../classlimelight_1_1Limelight.html#a152deddefbea1b3b4e69c05ac699b422',1,'limelight::Limelight::SetSharedRobotOrientation(wpi::units::degree_t yaw)'],['../classlimelight_1_1Limelight.html#aebfa1cc36a7c6ba0ca3a88ca77d792ce',1,'limelight::Limelight::SetSharedRobotOrientation(wpi::units::degree_t yaw, wpi::units::degrees_per_second_t yawRate, wpi::units::degree_t pitch, wpi::units::degrees_per_second_t pitchRate, wpi::units::degree_t roll, wpi::units::degrees_per_second_t rollRate)']]],
+  ['setthrottle_17',['SetThrottle',['../classlimelight_1_1Limelight.html#a23da442df4b539f02978ae180cec993a',1,'limelight::Limelight']]],
+  ['setusepipelineconfigurationoverride_18',['SetUsePipelineConfigurationOverride',['../classlimelight_1_1Limelight.html#a38fe1ccf824bd4c95abecebd9c915ff4',1,'limelight::Limelight']]],
+  ['setusesharedorientation_19',['SetUseSharedOrientation',['../classlimelight_1_1Limelight.html#a0cd786a77d7028518cd2f26f3a11a311',1,'limelight::Limelight']]],
+  ['sizebytes_20',['sizebytes',['../classlimelight_1_1FieldMap.html#a19d670d67d0dd98632ed908d16c12f32',1,'limelight::FieldMap::SizeBytes()'],['../classlimelight_1_1PipelineConfiguration.html#a353cc9d630817bc94a2df578faadaddc',1,'limelight::PipelineConfiguration::SizeBytes()']]]
 ];
